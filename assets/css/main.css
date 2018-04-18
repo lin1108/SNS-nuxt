@@ -1,28 +1,30 @@
-html, body
-{
-  background-color: #fff;
-  color: #000;
-  letter-spacing: 0.5px;
-  font-family: "Source Sans Pro", Arial, sans-serif;
-  height: 100vh;
-  margin: 0;
+/***************************全局清除浏览器默认样式***************************/
+*{
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    color: #333333;
+    font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+}
+ul,ol,li{
+    list-style: none;
+}
+input,input:hover,input:focus,input:active{
+    outline: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size: 17px;
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+a,a:hover{
+    text-decoration: none;
+    color: #333;
 }
 
-footer
-{
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #ddd;
-}
-
-a, a:hover, a:focus, a:visited
-{
-  color: #000;
-}
-
-.logo {
-  width: 100%;
-  height: auto;
-  max-width: 400px;
-  max-height: 289px;
-}

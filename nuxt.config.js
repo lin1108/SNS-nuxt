@@ -7,7 +7,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '第一次简书项目'}
+      { hid: 'description', name: 'description', content: '李志远的简书项目' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -16,7 +16,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~/assets/css/main.css','~/assets/css/animate.css','~/assets/css/font-awesome.css','~/assets/css/normalize.css'],
+  css: ['~/assets/css/main.css','~/assets/css/animate.css','~/assets/css/font-awesome.css'],
   /*
   ** Add axios globally
   */
@@ -25,7 +25,7 @@ module.exports = {
     /*
     ** Run ESLINT on save
     */
-    extend (config, ctx) {
+    /*extend (config, ctx) {
       if (ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -34,6 +34,6 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    }*/
   }
 }

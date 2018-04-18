@@ -1,25 +1,10 @@
 <template>
-    <div>
-        <nuxt/>
-
-    </div>
+  <div>
+    <nuxt/>
+  </div>
 </template>
-
 <script>
-    import Vue from 'vue';
-    import BootstrapVue from 'bootstrap-vue';
+export default {
 
-    Vue.use(BootstrapVue);
-    //首先引入bootstrap.css文件，加载bootstrap样式
-    import 'bootstrap/dist/css/bootstrap.css';
-    //引入bootstrap-vue.css
-    import 'bootstrap-vue/dist/bootstrap-vue.css'
-
-    export default {
-        components: {}
-    }
+}
 </script>
-
-<style>
-
-</style>
