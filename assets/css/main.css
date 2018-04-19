@@ -23,7 +23,10 @@ body{
 #__layout>div{
     height: 100%;
 }
-ul,ol,li{
+#default-template{
+    height: 100%;
+}
+ul,ol,dl{
     list-style: none;
     padding: 0;
 }
