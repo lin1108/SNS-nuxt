@@ -49,7 +49,7 @@
                         </nuxt-link>
                     </li>
                     <li>
-                        <nuxt-link to="/">
+                        <nuxt-link to="/https://www.jianshu.com/users/auth/wechat">
                             <i class="fa fa-weixin"></i>
                         </nuxt-link>
                     </li>
@@ -59,7 +59,14 @@
                         </nuxt-link>
                     </li>
                     <li>
-                        <a class="douban" target="_blank" href="/users/auth/douban"><i class="iconfont ic-douban"></i></a>
+                        <nuxt-link to="">
+                            <i class="other"></i>
+                        </nuxt-link>
+                    </li>
+                    <li style="display:none">
+                        <nuxt-link to="/">
+                            <i class="fa fa-renren"></i>
+                        </nuxt-link>
                     </li>
                 </ul>
             </div>

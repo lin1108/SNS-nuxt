@@ -59,10 +59,10 @@
     .sign .main h4 a{
         padding: 10px;
         color: #969696;
-        font-weight: 700;
+        font-weight: 400;
     }
     .sign .main h4 b{
-        font-weight: 800;
+        font-weight: 700;
         padding: 10px;
         color: #969696;
     }
@@ -141,7 +141,6 @@
     }
     .sign .main form button{
         width: 100%;
-        /*margin-top: 20px;*/
         padding: 9px 18px;
         text-align: center;
         color: #fff;
@@ -150,7 +149,8 @@
         border-radius: 25px;
         font-size: 18px;
         cursor: pointer;
-        clear: both;
+        font-family: inherit;
+        line-height: inherit;
     }
     .sign .main form button.sign-up-btn{
         background-color: #42C02E;
@@ -225,7 +225,14 @@
     .sign .main .more-sign ul li i.fa-qq{
         color: #498ad5;
     }
-
+    .sign .main .more-sign ul li i.other:before{
+        cursor: pointer;
+        color: #A69E99;
+        content: '其它';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+    }
     @media screen and (max-width: 768px){
         .sign .logo{
             display: none;
