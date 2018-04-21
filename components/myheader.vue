@@ -147,27 +147,27 @@
                             </form>
                         </li>
                         <!--Aa-->
-                        <li class="mode">
+                        <li class="user mode">
                             <div>
                                 <span @click="modechooseShow">Aa</span>
                                 <transition name="fademode">
-                                    <div v-show="modeShow" class="mode-btn-group">
+                                    <div v-show="modeShow" class="drop-menu mode-btn-group">
                                         <div class="day-night-mode">
                                             <i class="fa fa-moon-o"></i>
                                             <span>夜间模式</span>
                                         </div>
                                         <div class="switch day-night">
-                                            <button class="switch-btn">开</button>
-                                            <button class="switch-btn active">关</button>
+                                            <button class="switch-btn switchDay" @click="switchDay">开</button>
+                                            <button class="switch-btn switchNight active" @click="switchNight">关</button>
                                         </div>
                                         <div class="hr"></div>
                                         <div class="switch font-family">
-                                            <button class="switch-btn">宋体</button>
-                                            <button class="switch-btn active">黑体</button>
+                                            <button class="switch-btn fontSong" @click="fontSong">宋体</button>
+                                            <button class="switch-btn fontBlack active" @click="fontBlack">黑体</button>
                                         </div>
                                         <div class="switch easy-complex">
-                                            <button class="switch-btn active">简</button>
-                                            <button class="switch-btn">繁</button>
+                                            <button class="switch-btn active fontEasy" @click="fontEasy">简</button>
+                                            <button class="switch-btn fontComplex" @click="fontComplex">繁</button>
                                         </div>
                                     </div>
                                 </transition>
@@ -229,6 +229,62 @@
             },
             modechooseShow:function () {
                 this.modeShow = !this.modeShow;
+            },
+            switchDay: function () {
+                $('.switchDay').addClass('active').siblings().removeClass('active'),
+                    $('.switch-btn').css('outline', 'none');
+                $('nav').css({
+                    backgroundColor: '#3f3f3f',
+                    borderBottomColor: '#2f2f2f'
+                }),
+                    $('.nav-list .mode>div>span').css('backgroundolor', '#3f3f3f'),
+                    $('.nav-list>li>a').css('color', '#fff'),
+                    $('.nav-list>li.find>a').css('color', '#ea6f5a'),
+                    $('.nav-list>li.search .search-input').css({
+                        backgroundColor: '#4f4f4f',
+                        borderColor: '#4f4f4f',
+                        color: '#fff'
+                    }),
+                    $('.nav-list>li.search a').css({
+                        color: '#fff'
+                    }),
+                    $('.nav-list>li>a').hover(function () {
+                        $(this).css('backgroundColor', '#2f2f2f')
+                    }, function () {
+                        $(this).css('backgroundColor', '#3f3f3f')
+                    }),
+                    $('.user').hover(function () {
+                        $(this).css('backgroundColor', '#2f2f2f')
+                    }, function () {
+                        $(this).css('backgroundColor', '#3f3f3f')
+                    }),
+                    $('.user .drop-menu').css('backgroundColor', '#3f3f3f'),
+                    $('.user .drop-menu>li>a').css('color', '#fff'),
+                    $('.user .drop-menu>li>a').hover(function () {
+                        $(this).css('backgroundColor', '#2f2f2f')
+                    }, function () {
+                        $(this).css('backgroundColor', '#3f3f3f')
+                    })
+            },
+            switchNight: function () {
+                $('.switchNight').addClass('active').siblings().removeClass('active');
+                $('.switch-btn').css('outline','none');
+            },
+            fontSong:function () {
+                $('.fontSong').addClass('active').siblings().removeClass('active');
+                $('.switch-btn').css('outline','none');
+            },
+            fontBlack:function () {
+                $('.fontBlack').addClass('active').siblings().removeClass('active');
+                $('.switch-btn').css('outline','none');
+            },
+            fontEasy:function () {
+                $('.fontEasy').addClass('active').siblings().removeClass('active');
+                $('.switch-btn').css('outline','none');
+            },
+            fontComplex:function () {
+                $('.fontComplex').addClass('active').siblings().removeClass('active');
+                $('.switch-btn').css('outline','none');
             }
         }
     }
@@ -425,25 +481,22 @@
         cursor: pointer;
         color: #969696;
     }
-    nav .nav-list .mode:after{
-        content: '';
-        display: block;
-        height: 0;
-        visibility: hidden;
-        clear: both;
-    }
     nav .nav-list .mode .mode-btn-group{
         padding: 20px 25px;
-        border: 1px solid #e5e5e5;
         box-shadow: 0 0 8px rgba(0,0,0,.1);
         background-color: #fff;
-        /*margin-top: 56px;*/
     }
     nav .nav-list .mode>div>span{
         line-height: 56px;
-        text-align: right;
         padding: 0 30px;
         display: block;
+        position: relative;
+    }
+    nav .nav-list .mode>div>span:hover{
+        background-color: #fff;
+    }
+    nav .nav-list .user.mode .drop-menu{
+        margin-left: -150px;
     }
     nav .nav-list .mode .switch{
         text-align: center;
@@ -453,7 +506,7 @@
     nav .nav-list .mode .switch.day-night{
         width: 96px;
         display: inline-block;
-        margin-left: 10px;
+        margin-left: 20px;
     }
     nav .nav-list .mode .day-night-mode{
         display: inline-block;
@@ -512,7 +565,7 @@
         position: fixed;
         top: 56px;
         left: 0;
-        z-index: 5;
+        z-index: 8;
         background-color: #fff;
     }
     nav .menu-text li{
@@ -576,39 +629,10 @@
         height: 206px;
     }
     .fade-enter-active,.fade-leave-active {
-        transition: height linear 1s;
+        transition: all linear 1s;
     }
 
-    /*@keyframes menuenter{*/
-        /*0%{*/
-            /*height: 0*/
-        /*}*/
-        /*50%{*/
-            /*height: 103px;*/
-        /*}*/
-        /*100%{*/
-            /*height: 206px;*/
-        /*}*/
-    /*}*/
-    /*.fade-enter-active{*/
-        /*animation: menuenter 1s;*/
-    /*}*/
-    /*@keyframes menuleave{*/
-        /*0%{*/
-            /*height: 206px;*/
-        /*}*/
-        /*50%{*/
-            /*height: 103px;*/
-        /*}*/
-        /*100%{*/
-            /*height: 0;*/
-        /*}*/
-    /*}*/
-    /*.fade-leave-active{*/
-        /*animation: menuleave 1s;*/
-    /*}*/
-
-    /******Aa******/
+    /*********Aa动画*********/
     .fademode-enter,.fademode-leave-to  {
         opacity: 0;
     }
@@ -619,17 +643,6 @@
         transition: opacity 0.3s;
     }
 
-    /*@keyframes modeenter{*/
-        /*0%{*/
-            /*height: 0*/
-        /*}*/
-        /*100%{*/
-            /*height: 100%;*/
-        /*}*/
-    /*}*/
-    /*.fademode-enter-active{*/
-        /*animation: modeenter 0.3s;*/
-    /*}*/
     /*@keyframes modeleave{*/
         /*0%{*/
             /*height: 100%;*/
