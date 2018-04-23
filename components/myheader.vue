@@ -68,10 +68,10 @@
                         </li>
                     </ul>
                 </div>
-
                 <!--导航条中间部分-->
                 <div class="container">
-                    <ul class="nav-list">
+                    <div class="row">
+                        <ul class="nav-list">
                         <!--发现-->
                         <li class="find">
                             <nuxt-link to="/" class="active">
@@ -149,7 +149,7 @@
                         <!--Aa-->
                         <li class="user mode">
                             <div>
-                                <span @click="modechooseShow">Aa</span>
+                                <span @click="modeShow=!modeShow">Aa</span>
                                 <transition name="fademode">
                                     <div v-show="modeShow" class="drop-menu mode-btn-group">
                                         <div class="day-night-mode">
@@ -174,14 +174,14 @@
                             </div>
                         </li>
                         <!--隐藏的菜单按钮-->
-                        <li class="menu-btn" @click="menutextShow">
+                        <li class="menu-btn" @click="menuShow=!menuShow">
                             <i class="fa fa-align-justify"></i>
                         </li>
                     </ul>
-                    <!--隐藏的菜单内容-->
-                    <transition name="fade">
+                        <!--隐藏的菜单内容-->
+                        <transition name="fade" enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutUp">
                         <ul class="menu-text" v-show="menuShow">
-                            <li>
+                            <li class="active">
                                 <nuxt-link to="/" class="active">
                                     发现
                                 </nuxt-link>
@@ -206,6 +206,7 @@
                             </li>
                         </ul>
                     </transition>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -224,12 +225,6 @@
             }
         },
         methods:{
-            menutextShow:function () {
-                this.menuShow = !this.menuShow;
-            },
-            modechooseShow:function () {
-                this.modeShow = !this.modeShow;
-            },
             switchDay: function () {
                 $('.switchDay').addClass('active').siblings().removeClass('active'),
                     $('.switch-btn').css('outline', 'none');
@@ -492,11 +487,8 @@
         display: block;
         position: relative;
     }
-    nav .nav-list .mode>div>span:hover{
-        background-color: #fff;
-    }
     nav .nav-list .user.mode .drop-menu{
-        margin-left: -150px;
+        margin-left: -152px;
     }
     nav .nav-list .mode .switch{
         text-align: center;
@@ -568,14 +560,24 @@
         z-index: 8;
         background-color: #fff;
     }
-    nav .menu-text li{
+    nav .menu-text>li{
         text-align: center;
         width: 100%;
         padding: 15px;
         height: 56px;
         border-bottom: 1px solid #ddd;
     }
-    nav .menu-text li a.active{
+    nav .menu-text>li:hover{
+        background-color: #eee;
+    }
+    nav .menu-text>li:nth-of-type(-n+3){
+        cursor: pointer;
+    }
+    nav .menu-text>li.active:hover,
+    nav .menu-text>li.search:hover{
+        background-color: #fff;
+    }
+    nav .menu-text>li a.active{
         color: #ea6f5a;
     }
     nav .menu-text .search{
@@ -622,15 +624,15 @@
 
     /************动画************/
     /****隐藏菜单动画****/
-    .fade-enter,.fade-leave-to {
-        height: 0;
-    }
-    .fade-enter-to,.fade-leave {
-        height: 206px;
-    }
-    .fade-enter-active,.fade-leave-active {
-        transition: all linear 1s;
-    }
+    /*.fade-enter,.fade-leave-to {*/
+        /*height: 0;*/
+    /*}*/
+    /*.fade-enter-to,.fade-leave {*/
+        /*height: 206px;*/
+    /*}*/
+    /*.fade-enter-active,.fade-leave-active {*/
+        /*transition: all 0.2s;*/
+    /*}*/
 
     /*********Aa动画*********/
     .fademode-enter,.fademode-leave-to  {
@@ -644,7 +646,7 @@
     }
 
     /*@keyframes modeleave{*/
-        /*0%{*/
+        /*0{*/
             /*height: 100%;*/
         /*}*/
         /*100%{*/

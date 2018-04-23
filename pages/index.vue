@@ -1,7 +1,51 @@
 <template>
     <div style="height: 100%">
         <myheader></myheader>
-        <p style="height: 2000px;background-color: #C3D08B">主题内容部分</p>
+        <div class="container index">
+            <div class="row">
+                <!--**********热门专题**********-->
+                <div class="col-xs-16 main">
+                    <div class="recommend-collection">
+                        <nuxt-link to="/collection/123" class="collection">
+                            <img src="~assets/img/top1.jpg" alt="">
+                            <span class="name">手绘</span>
+                        </nuxt-link>
+                        <nuxt-link to="/collection/123" class="collection">
+                            <img src="~assets/img/top2.jpg" alt="">
+                            <span class="name">读书</span>
+                        </nuxt-link>
+                        <nuxt-link to="/collection/123" class="collection">
+                            <img src="~assets/img/top3.jpg" alt="">
+                            <span class="name">社会热点</span>
+                        </nuxt-link>
+                        <nuxt-link to="/collection/123" class="collection">
+                            <img src="~assets/img/top4.jpg" alt="">
+                            <span class="name">@IT·互联网</span>
+                        </nuxt-link>
+                        <nuxt-link to="/collection/123" class="collection">
+                            <img src="~assets/img/top5.jpg" alt="">
+                            <span class="name">旅行·在路上</span>
+                        </nuxt-link>
+                        <nuxt-link to="/collection/123" class="collection">
+                            <img src="~assets/img/top6.jpg" alt="">
+                            <span class="name">历史</span>
+                        </nuxt-link>
+                        <nuxt-link to="/collection/123" class="collection">
+                            <img src="~assets/img/top7.jpg" alt="">
+                            <span class="name">自然科普</span>
+                        </nuxt-link>
+                        <nuxt-link to="/collection/123" class="more">
+                            <span class="more">更多热门专题 ></span>
+                        </nuxt-link>
+                        <!--<a href="https://www.jianshu.com/recommendations/collections?utm_medium=index-collections&utm_source=desktop" target="_blank" class="more">更多热门专题</a>-->
+                    </div>
+                    <div class="split-line"></div>
+                </div>
+                <div class="col-xs-offset-1 col-xs-7 aside">
+                    侧边栏
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -26,6 +70,3 @@
         }
     }
 </script>
-<style>
-
-</style>
