@@ -1,7 +1,7 @@
 <template>
     <div style="height: 100%">
         <myheader></myheader>
-        <p style="height: 2000px;background-color: #C3D08B">主题内容部分</p>
+        <p style="height: 2000px;background-color: #C3D08B">主体内容部分</p>
     </div>
 </template>
 <script>
