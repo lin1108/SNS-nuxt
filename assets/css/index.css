@@ -1,4 +1,5 @@
 /****************************************首页布局开始************************************/
+/**********************热门专题***********************/
 .index .main{
     padding-top: 30px;
     padding-right: 0;
@@ -21,7 +22,6 @@
     font-family: inherit;
     overflow: hidden;
     vertical-align: middle;
-
 }
 .index .main .recommend-collection a.more{
     color: #787878;
@@ -44,6 +44,138 @@
     max-width: 150px;/*设最大宽度*/
 }
 .index .main .split-line{
-    margin: 10px 0 15px 0;
+    margin: 0 0 15px 0;
     border-top: 1px solid #f0f0f0;
+}
+/*****************************文章列表******************************/
+.note-list li{
+    position: relative;
+    width: 100%;
+    padding: 0 0 17px;
+    margin: 0 0 17px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.note-list li .wrap-img{
+    width:150px;
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -60px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.note-list li .wrap-img img{
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+.note-list li.have-img>div{
+    padding-right: 160px;
+}
+.note-list .author{
+    font-size: 14px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.note-list .author .avatar{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.note-list .author .avatar img{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+.note-list .author .info{
+    display: inline-block;
+    vertical-align: middle;
+}
+.note-list .author .icon-tag{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.note-list .author .icon-tag>img{
+    width: 15px;
+}
+.note-list .author .time{
+    color: #969696;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+.note-list .author .icon-title{
+    position: absolute;
+    top: -30px;
+    left: 32px;
+    padding: 5px 0;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    width: 130px;
+    text-align: center;
+}
+.note-list .author .caret-down{
+    position: absolute;
+    top: -8px;
+    left: 90px;
+    font-size: 18px;
+    color: #000;
+}
+.note-list .title{
+    display: block;
+    margin: -7px 0 4px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+.note-list .title:hover{
+    text-decoration: underline;
+}
+.note-list .abstruct{
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 24px;
+}
+.note-list .meta{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.note-list .meta .collection-tag{
+    max-width: 800px;
+    display: inline-block;
+    padding: 0 5px;
+    color: #ea6f5a;
+    border: 1px solid rgba(236,97,73,.7);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 3px;
+    transition:all .3s ease-in;
+}
+.note-list .meta .collection-tag:hover{
+    background-color: rgb(254,247,246);
+    color: #ec6149!important;
+    border-color: #ec6149;
+}
+.note-list .meta a{
+    color: #b4b4b4;
+    margin-right: 10px;
+    transition:.3s ease-in;
+}
+.note-list .meta a:hover{
+    color: #787878;
+}
+.note-list .meta span{
+    color: #b4b4b4;
+    margin-right: 10px;
 }

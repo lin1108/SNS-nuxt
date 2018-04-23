@@ -32,6 +32,9 @@ ul,ol,dl{
     padding: 0;
     margin: 0;
 }
+li{
+    line-height: 20px;
+}
 input,input:hover,input:focus,input:active{
     outline: none;
 }
