@@ -179,7 +179,7 @@
                         </li>
                     </ul>
                         <!--隐藏的菜单内容-->
-                        <transition name="fade" enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutUp">
+                        <transition name="fade">
                         <ul class="menu-text" v-show="menuShow">
                             <li class="active">
                                 <nuxt-link to="/" class="active">
@@ -559,6 +559,7 @@
         left: 0;
         z-index: 8;
         background-color: #fff;
+        overflow: hidden;
     }
     nav .menu-text>li{
         text-align: center;
@@ -624,15 +625,15 @@
 
     /************动画************/
     /****隐藏菜单动画****/
-    /*.fade-enter,.fade-leave-to {*/
-        /*height: 0;*/
-    /*}*/
-    /*.fade-enter-to,.fade-leave {*/
-        /*height: 206px;*/
-    /*}*/
-    /*.fade-enter-active,.fade-leave-active {*/
-        /*transition: all 0.2s;*/
-    /*}*/
+    .fade-enter,.fade-leave-to {
+        height: 0;
+    }
+    .fade-enter-to,.fade-leave {
+        height: 206px;
+    }
+    .fade-enter-active,.fade-leave-active {
+        transition: all 0.2s;
+    }
 
     /*********Aa动画*********/
     .fademode-enter,.fademode-leave-to  {

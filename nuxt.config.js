@@ -23,6 +23,10 @@ module.exports = {
         '~/assets/css/font-awesome.css',
         '~/assets/css/index.css'
     ],
+    js: [
+        '~/assets/libs/jquery.js',
+        '~/assets/libs/jquery.rotate.js'
+    ],
     /*
     ** Add axios globally
     */
