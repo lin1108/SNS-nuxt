@@ -3,8 +3,9 @@
         <myheader></myheader>
         <div class="container index">
             <div class="row">
-                <!--====================热门专题===================-->
+                <!--====================热门专题以及文章列表===================-->
                 <div class="col-xs-16 main">
+                    <!--====热门专题====-->
                     <div class="recommend-collection">
                         <nuxt-link to="/collection/123" class="collection">
                             <img src="~assets/img/top1.jpg" alt="">
@@ -44,6 +45,7 @@
                     <!--========================文章列表===========================-->
                     <div class="list-container">
                         <ul class="note-list">
+                            <!--===有图片的文章===-->
                             <li class="have-img">
                                 <div>
                                     <nuxt-link to="/" class="wrap-img">
@@ -95,6 +97,160 @@
                                             <span>
                                                 <i class="fa fa-rmb"></i>
                                                 10
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--===没有图片的文章===-->
+                            <li>
+                                <div class="">
+                                    <!--<nuxt-link to="/">-->
+                                    <!--<img src="~assets/img/note.jpg" alt="">-->
+                                    <!--</nuxt-link>-->
+                                    <div class="content">
+                                        <div class="author">
+                                            <nuxt-link to="/" class="avatar">
+                                                <img src="~assets/img/author2.jpg" alt="">
+                                            </nuxt-link>
+                                            <div class="info">
+                                                <nuxt-link to="/" class="nickname">
+                                                    范傻比
+                                                </nuxt-link>
+                                                <a href="http://www.jianshu.com/p/9cb2014de249" target="_blank"
+                                                   class="icon-tag" @mouseenter="showTitle=true"
+                                                   @mouseleave="showTitle=false">
+                                                    <img src="~assets/img/yes-tag.jpg" alt="">
+                                                </a>
+                                                <span class="time">04.23 19:20</span>
+                                            </div>
+                                            <div class="icon-title" v-show="showTitle">
+                                                简书认证群主
+                                            </div>
+                                            <div class="caret-down" v-show="showTitle">
+                                                <i class="fa fa-caret-down"></i>
+                                            </div>
+                                        </div>
+                                        <nuxt-link class="title" to="">二胎辣妈，每月五万字：在写作里，我是那个自律的“疯子”</nuxt-link>
+                                        <div class="abstruct">
+                                            因为热爱，所以疯狂。 2018.3.7 文/与君成悦 01 大宝幼儿园开学了，等了一个假期，终于等到了这一天，我像是看到了希望似的，开心极了。
+                                            凌乱喧闹的假期，她一会儿一个妈...
+                                        </div>
+                                        <div class="meta">
+                                            <nuxt-link to="/" class="collection-tag">社会与法</nuxt-link>
+                                            <nuxt-link to="/">
+                                                <i class="fa fa-eye"></i>
+                                                1500
+                                            </nuxt-link>
+                                            <nuxt-link to="/">
+                                                <i class="fa fa-comment"></i>
+                                                100
+                                            </nuxt-link>
+                                            <span>
+                                                <i class="fa fa-heart"></i>
+                                                20
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <!--<nuxt-link to="/">-->
+                                    <!--<img src="~assets/img/note.jpg" alt="">-->
+                                    <!--</nuxt-link>-->
+                                    <div class="content">
+                                        <div class="author">
+                                            <nuxt-link to="/" class="avatar">
+                                                <img src="~assets/img/author2.jpg" alt="">
+                                            </nuxt-link>
+                                            <div class="info">
+                                                <nuxt-link to="/" class="nickname">
+                                                    范傻比
+                                                </nuxt-link>
+                                                <a href="http://www.jianshu.com/p/9cb2014de249" target="_blank"
+                                                   class="icon-tag" @mouseenter="showTitle=true"
+                                                   @mouseleave="showTitle=false">
+                                                    <img src="~assets/img/yes-tag.jpg" alt="">
+                                                </a>
+                                                <span class="time">04.23 19:20</span>
+                                            </div>
+                                            <div class="icon-title" v-show="showTitle">
+                                                简书认证群主
+                                            </div>
+                                            <div class="caret-down" v-show="showTitle">
+                                                <i class="fa fa-caret-down"></i>
+                                            </div>
+                                        </div>
+                                        <nuxt-link class="title" to="">二胎辣妈，每月五万字：在写作里，我是那个自律的“疯子”</nuxt-link>
+                                        <div class="abstruct">
+                                            因为热爱，所以疯狂。 2018.3.7 文/与君成悦 01 大宝幼儿园开学了，等了一个假期，终于等到了这一天，我像是看到了希望似的，开心极了。
+                                            凌乱喧闹的假期，她一会儿一个妈...
+                                        </div>
+                                        <div class="meta">
+                                            <nuxt-link to="/" class="collection-tag">社会与法</nuxt-link>
+                                            <nuxt-link to="/">
+                                                <i class="fa fa-eye"></i>
+                                                1500
+                                            </nuxt-link>
+                                            <nuxt-link to="/">
+                                                <i class="fa fa-comment"></i>
+                                                100
+                                            </nuxt-link>
+                                            <span>
+                                                <i class="fa fa-heart"></i>
+                                                20
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <!--<nuxt-link to="/">-->
+                                    <!--<img src="~assets/img/note.jpg" alt="">-->
+                                    <!--</nuxt-link>-->
+                                    <div class="content">
+                                        <div class="author">
+                                            <nuxt-link to="/" class="avatar">
+                                                <img src="~assets/img/author2.jpg" alt="">
+                                            </nuxt-link>
+                                            <div class="info">
+                                                <nuxt-link to="/" class="nickname">
+                                                    范傻比
+                                                </nuxt-link>
+                                                <a href="http://www.jianshu.com/p/9cb2014de249" target="_blank"
+                                                   class="icon-tag" @mouseenter="showTitle=true"
+                                                   @mouseleave="showTitle=false">
+                                                    <img src="~assets/img/yes-tag.jpg" alt="">
+                                                </a>
+                                                <span class="time">04.23 19:20</span>
+                                            </div>
+                                            <div class="icon-title" v-show="showTitle">
+                                                简书认证群主
+                                            </div>
+                                            <div class="caret-down" v-show="showTitle">
+                                                <i class="fa fa-caret-down"></i>
+                                            </div>
+                                        </div>
+                                        <nuxt-link class="title" to="">二胎辣妈，每月五万字：在写作里，我是那个自律的“疯子”</nuxt-link>
+                                        <div class="abstruct">
+                                            因为热爱，所以疯狂。 2018.3.7 文/与君成悦 01 大宝幼儿园开学了，等了一个假期，终于等到了这一天，我像是看到了希望似的，开心极了。
+                                            凌乱喧闹的假期，她一会儿一个妈...
+                                        </div>
+                                        <div class="meta">
+                                            <nuxt-link to="/" class="collection-tag">社会与法</nuxt-link>
+                                            <nuxt-link to="/">
+                                                <i class="fa fa-eye"></i>
+                                                1500
+                                            </nuxt-link>
+                                            <nuxt-link to="/">
+                                                <i class="fa fa-comment"></i>
+                                                100
+                                            </nuxt-link>
+                                            <span>
+                                                <i class="fa fa-heart"></i>
+                                                20
                                             </span>
                                         </div>
                                     </div>
@@ -235,6 +391,54 @@
                 </div>
             </div>
         </div>
+        <!--================回到顶部================-->
+        <div class="side-tool">
+            <ul>
+                <li @click="returnTop" v-show="topbtnshow">
+                    <i class="fa fa-angle-up"></i>
+                </li>
+            </ul>
+        </div>
+        <!--===================底部内容==================-->
+        <footer class="container">
+            <div class="row">
+                <div class="col-xs-17 main">
+                    <a target="_blank" href="http://www.jianshu.com/c/jppzD2">关于简书</a>
+                    <em> · </em>
+                    <a target="_blank" href="http://www.jianshu.com/contact">联系我们</a>
+                    <em> · </em>
+                    <a target="_blank" href="http://www.jianshu.com/c/bfeec2e13990">加入我们</a>
+                    <em> · </em>
+                    <a target="_blank" href="http://www.jianshu.com/p/fc1c113e5b6b">简书出版</a>
+                    <em> · </em>
+                    <a target="_blank" href="http://www.jianshu.com/press">品牌与徽标</a>
+                    <em> · </em>
+                    <a target="_blank" href="http://www.jianshu.com/faqs">帮助中心</a>
+                    <em> · </em>
+                    <a target="_blank" href="http://www.jianshu.com/p/cabc8fa39830">合作伙伴</a>
+                    <div class="icp">
+                        ©2012-2018 上海佰集信息科技有限公司 / 简书 / 沪ICP备11018329号-5 /
+                        <a target="_blank"
+                           href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402002252">
+                            <img src="//cdn2.jianshu.io/assets/web/smrz-557fa318122c99a66523209bf9753a27.png"
+                                 alt="Smrz">
+                        </a>
+                        <a target="_blank"
+                           href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402002252">
+                            沪公网安备31010402002252号 / </a>
+                        <a target="_blank" href="http://www.shjbzx.cn/">
+                            <img src="//cdn2.jianshu.io/assets/web/wxb-a216456895eb66c17497dbd3da443cf8.png" alt="Wxb">
+                        </a>
+                        举报电话：021-34770013 /
+                        <a target="_blank"
+                           href="http://218.242.124.22:8081/businessCheck/verifKey.do?showType=extShow&amp;serial=9031000020171107081457000002158769-SAIC_SHOW_310000-20171115131223587837&amp;signData=MEQCIADWZ5aTcBeER5SOVp0ly+ElvKnwtjczum6Gi6wZ7/wWAiB9MAPM22hp947ZaBobux5PDkd0lfqoCOkVV7zjCYME6g==">
+                            <img src="//cdn2.jianshu.io/assets/web/zggsrz-5695587dccf490ca3e651f4228f7479e.png"
+                                 alt="Zggsrz">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </template>
 <script>
@@ -264,7 +468,8 @@
                 // followed: false,
                 // unfollowed: false,
                 followshow:true,
-                followedshow:true
+                followedshow:true,
+                topbtnshow:false
             }
         },
         methods: {
@@ -291,6 +496,18 @@
             //     this.follow = true;
             //     this.unfollowed = false;
             // }
+
+            returnTop:function () {
+                $('html').animate({scrollTop:0},500);
+            },
+            gotoTop:function () {
+                let curHeight = document.documentElement.scrollTop || document.body.scrollTop;
+                if (curHeight > 50) this.topbtnshow = true;
+                else this.topbtnshow = false;
+            }
+        },
+        mounted:function () {
+            window.addEventListener('scroll',this.gotoTop);
         }
     }
 </script>

@@ -183,7 +183,7 @@
     background-color: #a5a5a5;
     color: #fff;
     padding:10px;
-    margin: 20px 0;
+    margin: 30px 0;
     text-align: center;
     border-radius: 20px;
     font-size: 15px;
@@ -318,6 +318,53 @@
     text-align: center;
     border-radius: 4px;
 }
+/************回到顶部***********/
+.side-tool{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+}
+.side-tool ul{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.side-tool ul>li{
+    border: 1px solid #dcdcdc;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding-top: 12px;
+    font-size: 25px;
+    background-color: #fff;
+    color: #505050;
+    cursor: pointer;
+}
+.side-tool ul>li:hover{
+    background-color: #f7f7f7;
+}
+/********************************首页底部*********************************/
+footer .main{
+    color: #969696;
+    font-size: 13px;
+    margin: 50px 0 30px 0;
+}
+footer .main em{
+    font-style: italic;
+    font-weight: 600;
+}
+footer .icp{
+    color: #c8c8c8;
+    margin-top: 10px;
+    font-size: 12px;
+}
+footer .icp a{
+    color: #c8c8c8;
+}
+footer .icp img{
+    height: 30px;
+    vertical-align: middle;
+}
 
 /******二维码设置媒体查询*****/
 @media (max-width:1080px){
@@ -337,7 +384,7 @@
     }
 }
 
-/******************************************文章详情页*********************************/
+/******************************************文章详情页******************************************/
 .note{
     position: relative;
     padding-top: 10px;
