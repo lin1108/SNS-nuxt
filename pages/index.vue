@@ -72,9 +72,11 @@
                                                 <i class="fa fa-caret-down"></i>
                                             </div>
                                         </div>
-                                        <nuxt-link class="title" to="">从《唐人街探案2》探寻一个屌丝逆袭的真相</nuxt-link>
+                                        <nuxt-link class="title" to="/p/123">
+                                            三世断桥之白浪梦迷 第七章 望海镇
+                                        </nuxt-link>
                                         <div class="abstruct">
-                                            《唐人街探案2》目前票房已经突破33亿，是2015年《唐人街探案1》8亿余票房的4倍多，票房收入高居历年国产喜剧电影的榜首。这部电影成功的背后，秦风的扮演者刘昊然，宋义的扮演...
+                                            再说若冰和十七，伏身在东镇庙西驿馆屋顶，听尚书府大管家求石抑扬顿挫地朗诵《获鹿记》，正沉浸在一派安静祥和的气氛中，也忘了什么月桂不月桂，剑胆不剑胆，忽听一声响亮，两个黑衣...
                                         </div>
                                         <div class="meta">
                                             <nuxt-link to="/" class="collection-tag">散文随笔</nuxt-link>
@@ -246,7 +248,7 @@
                 {charset: 'utf-8'},
                 {name: 'keywords', content: '简书首页'},
                 {name: 'description', content: '简书首页'},
-                {name: 'author', content: 'jianshu by Linli'},
+                {name: 'author', content: 'Linli'},
             ]
         },
         components: {
