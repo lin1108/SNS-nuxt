@@ -8,7 +8,7 @@
         <div class="normal-comment-list">
             <!--====显示留言的信息====-->
             <div class="top-title">
-                <span>1 条评论</span>
+                <span>10条评论</span>
                 <a href="#" class="author-only">只看作者</a>
                 <div class="pull-right">
                     <a href="#" class="active">按喜欢排序</a>
@@ -36,7 +36,10 @@
                 <div class="comment-wrap">
                     <p>支持一下，消灭0评论</p>
                     <div class="tool-group">
-                        <a href="#" class="like-btn">8人赞</a>
+                        <a href="javascript:;" class="like-btn" @mouseenter="likeshow=true" @mouseleave="likeshow=false">
+                            <i :class="likeshow&&!likeclick?'fa fa-thumbs-o-up active':likeclick?'fa fa-thumbs-up':'fa fa-thumbs-o-up' "@click="likeclick=!likeclick"></i>
+                            <span :class="likeshow||likeclick?'active':''">8人赞</span>
+                        </a>
                         <a href="#" class="comment-btn">
                             <i class="fa fa-comment-o"></i>
                             <span>回复</span>
@@ -60,6 +63,8 @@
         },
         data () {
             return{
+                likeshow:false,
+                likeclick:false,
                 comments:[
                     {
                         id:19935725,
@@ -229,5 +234,52 @@
     .comment-list .comment{
         padding: 20px 0 30px 0;
         border-bottom: 1px solid #f0f0f0;
+    }
+    .comment-list .comment .author{
+        margin-bottom: 15px;
+    }
+    .comment-list .comment .author .v-tooltip-container{
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .comment-list .comment .author .v-tooltip-container .avatar{
+        width: 38px;
+        height: 38px;
+    }
+    .comment-list .comment .author .info{
+        display: inline-block;
+    }
+    .comment-list .comment .author .info .name{
+        font-size: 15px;
+    }
+    .comment-list .comment .author .info .meta{
+        font-size: 12px;
+        color: #969696;
+    }
+    .comment-list .comment .comment-wrap p{
+        font-size: 16px;
+        margin: 10px 0;
+        line-height: 1.5;
+        word-break: break-word;
+        color: #333333;
+    }
+    .comment-list .comment .comment-wrap .tool-group>a{
+        font-size: 14px;
+        color: #969696;
+        margin-right: 15px;
+    }
+    .comment-list .comment .comment-wrap .tool-group>a.comment-btn:hover{
+        color: #2f2f2f;
+    }
+    .comment-list .comment .comment-wrap .tool-group>a>i{
+        margin-right: 5px;
+        font-size: 16px;
+    }
+    .comment-list .comment .comment-wrap .tool-group>a>i.active,
+    .comment-list .comment .comment-wrap .tool-group>a>i.fa-thumbs-up{
+        color: #e05244;
+    }
+    .comment-list .comment .comment-wrap .tool-group>a>span.active{
+        color: #2f2f2f;
     }
 </style>

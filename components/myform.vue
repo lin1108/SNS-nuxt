@@ -2,7 +2,7 @@
     <div class=".comment-list">
         <form action="" method="post" class="new-comment">
             <slot></slot>
-            <textarea name="comment-content" id="" cols="30" rows="10" placeholder="写下你的评论">
+            <textarea name="comment-content" id="" cols="30" rows="10" placeholder="写下你的评论...">
             </textarea>
             <div class="write-function-block">
                 <div class="emoji-modal-wrap">
