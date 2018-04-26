@@ -34,11 +34,10 @@
                     </div>
                 </div>
                 <div class="comment-wrap">
-                    <p>支持一下，消灭0评论</p>
+                    <p>在《月亮和六便士》里面作者写道这么一句话：我们总是把别人的成功原因归结到最不耻的那一种。这也许就是人类嫉妒的天性。这就好比有些人明明自己买不起苹果，还嘲笑用苹果手机的人崇洋媚外。而真正的奋斗者是告诉自己，争取下次出的新苹果手机，我也能毫不犹豫的买得起。</p>
                     <div class="tool-group">
-                        <a href="javascript:;" class="like-btn" @mouseenter="likeshow=true" @mouseleave="likeshow=false">
-                            <i :class="likeshow&&!likeclick?'fa fa-thumbs-o-up active':likeclick?'fa fa-thumbs-up':'fa fa-thumbs-o-up' "@click="likeclick=!likeclick"></i>
-                            <span :class="likeshow||likeclick?'active':''">8人赞</span>
+                        <a href="javascript:;" class="like-btn" :class="likeclick?'click':''" @click="likeclick=!likeclick">
+                            <span>{{likeclick?this.num+1:this.num}}人赞</span>
                         </a>
                         <a href="#" class="comment-btn">
                             <i class="fa fa-comment-o"></i>
@@ -47,7 +46,36 @@
                     </div>
                 </div>
                 <div class="sub-comment-list">
+                    <div class="sub-comment">
+                        <div class="sub-comment-content">
+                            <div class="v-tooltip-container">
+                                <nuxt-link to="/">
+                                    范傻比
+                                </nuxt-link>：
+                                <span>
+                                    <a href="#" class="maleskine">
+                                        @林无敌
+                                    </a>
+                                    对，你说得对，你说的都是对的！
+                                </span>
+                            </div>
+                        </div>
+                        <div class="sub-tool-group">
+                            <span>2018.04.26 10:02</span>
+                            <a href="#">
+                                <i class="fa fa-comment-o"></i>
+                                <span>回复</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sub-comment more-comment">
+                        <a href="#" class="more-comment-btn">
+                            <i class="fa fa-edit"></i>
+                            <span>添加新评论</span>
+                        </a>
+                    </div>
 
+                    <myform></myform>
                 </div>
             </div>
         </div>
@@ -63,8 +91,8 @@
         },
         data () {
             return{
-                likeshow:false,
                 likeclick:false,
+                num:10,
                 comments:[
                     {
                         id:19935725,
@@ -196,9 +224,11 @@
     }
 </script>
 
-<style scoped>
-
+<style>
     /********显示留言信息********/
+    .comment-list{
+        padding-top: 20px;
+    }
     .comment-list .normal-comment-list{
         margin-top: 30px;
     }
@@ -256,18 +286,53 @@
         font-size: 12px;
         color: #969696;
     }
+    /***************************************************/
     .comment-list .comment .comment-wrap p{
         font-size: 16px;
         margin: 10px 0;
         line-height: 1.5;
-        word-break: break-word;
-        color: #333333;
     }
     .comment-list .comment .comment-wrap .tool-group>a{
         font-size: 14px;
         color: #969696;
         margin-right: 15px;
+        position: relative;
     }
+    .comment-list .comment .comment-wrap .like-btn span{
+        margin-left: 22px;
+    }
+    .comment-list .comment .comment-wrap .like-btn:before{
+        content: '';
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: -16px;
+        top: -16px;
+        background: url("../assets/img/zan.png") left no-repeat;
+        background-size: 1050px 50px;
+    }
+    .comment-list .comment .comment-wrap .like-btn:hover span{
+        color: #2f2f2f;
+    }
+    .comment-list .comment .comment-wrap .like-btn:hover:before{
+        background-position-x: -50px;
+    }
+    .comment-list .comment .comment-wrap .like-btn.click{
+        color: #2f2f2f;
+    }
+    .comment-list .comment .comment-wrap .like-btn.click:before{
+        animation: clicklike .5s steps(20) forwards;
+    }
+    @keyframes clicklike {
+        0%{
+            background-position: left;
+        }
+        100%{
+            background-position: right;
+        }
+    }
+
+
     .comment-list .comment .comment-wrap .tool-group>a.comment-btn:hover{
         color: #2f2f2f;
     }
@@ -275,11 +340,53 @@
         margin-right: 5px;
         font-size: 16px;
     }
-    .comment-list .comment .comment-wrap .tool-group>a>i.active,
-    .comment-list .comment .comment-wrap .tool-group>a>i.fa-thumbs-up{
-        color: #e05244;
+
+    /**************二级评论**************/
+    .comment-list .sub-comment-list{
+        margin: 20px 0 0 5px;
+        padding: 5px 0 5px 20px;
+        border-left: 2px solid #d9d9d9;
     }
-    .comment-list .comment .comment-wrap .tool-group>a>span.active{
-        color: #2f2f2f;
+    .comment-list .sub-comment-list .sub-comment{
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .comment-list .sub-comment-list .sub-comment .sub-comment-content{
+        font-size: 14px;
+        line-height: 1.7;
+        margin-top: 5px;
+    }
+    .comment-list .sub-comment-list .sub-comment a{
+        color: #3194d0;
+    }
+    .comment-list .sub-comment-list .sub-comment .sub-tool-group{
+        font-size: 14px;
+        color: #969696;
+    }
+    .comment-list .sub-comment-list .sub-comment .sub-tool-group a{
+        color: #969696;
+        margin-left: 10px;
+    }
+    .comment-list .sub-comment-list .sub-comment .sub-tool-group a i{
+        font-size: 14px;
+        margin-right: 5px;
+    }
+    .comment-list .sub-comment-list .more-comment{
+        border: 0;
+        font-size: 14px;
+        color: #969696;
+    }
+    .comment-list .sub-comment-list .more-comment a{
+        color: #969696;
+    }
+    .comment-list .sub-comment-list .more-comment a:hover{
+        color: #333;
+    }
+    .comment-list .sub-comment-list .more-comment a i{
+        margin-right: 5px;
+    }
+    .comment-list .sub-comment-list form{
+        margin: 0!important;
     }
 </style>

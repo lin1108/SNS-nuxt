@@ -605,6 +605,18 @@ footer .icp img{
     border: 1px solid #ea6f5a;
     cursor: pointer;
 }
+.note .post .meta-bottom .like:hover{
+background-color:#fef7f6;
+}
+.note .post .meta-bottom .like.active{
+    background-color: #ea6f5a;
+}
+.note .post .meta-bottom .like.active>div{
+    color: #fff;
+}
+.note .post .meta-bottom .like.active>div a{
+    color: #fff;
+}
 .note .post .meta-bottom .like .like-btn{
     padding: 13px 0 15px 0;
     font-size: 0;
@@ -618,8 +630,21 @@ footer .icp img{
     left: 12px;
     width: 50px;
     height: 50px;
-    background: url("../img/heart.png") left no-repeat;
+    background-image: url("../img/heart.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
     background-size: 1000px 50px;
+}
+.note .post .meta-bottom .like.active .like-btn:before{
+    animation: changeheart .5s steps(19) forwards;
+}
+@keyframes changeheart {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
 }
 .note .post .meta-bottom .like .like-btn a{
     padding: 18px 30px 18px 55px;
@@ -631,13 +656,15 @@ footer .icp img{
     font-size: 18px;
     border-left: 1px solid #ea6f5a;
 }
+.note .post .meta-bottom .like.active .like-num{
+    border-left: 1px solid #fff;
+}
 .note .post .meta-bottom .like .like-num a{
     padding: 18px 26px 18px 18px;
     color: #ea6f5a;
 }
-.note .post .meta-bottom .like:hover{
-    background-color:rgb(254,247,246);
-}
+
+/*********分享**********/
 .note .post .meta-bottom .share{
     float: right;
     margin-top: 5px;
@@ -676,4 +703,10 @@ footer .icp img{
     border-radius: 40px;
     text-align: center;
 }
-
+/*******************回到顶部****************/
+.note .side-tool ul>li:nth-of-type(-n+3){
+    border-bottom: none;
+}
+.note .side-tool ul>li .fa-plus{
+    font-weight: 400;
+}

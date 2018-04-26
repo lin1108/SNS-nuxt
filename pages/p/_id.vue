@@ -154,14 +154,12 @@
                 </div>
                 <!--============喜欢和分享===========-->
                 <div class="meta-bottom">
-                    <div class="like">
-                        <div class="like-btn">
-                            <!--<i class="fa fa-heart-o"></i>-->
-                            <!--<span>喜欢</span>-->
-                            <a href="#">喜欢</a>
+                    <div class="like" :class="likeshow?'active':''">
+                        <div class="like-btn" @click="likeshow=!likeshow">
+                            <a href="javascript:;" :class="likeshow?'active':''">喜欢</a>
                         </div>
                         <div class="like-num">
-                            <a href="#">50</a>
+                            <a href="javascript:;">{{likeshow?this.num+1:this.num}}</a>
                         </div>
                     </div>
                     <div class="share">
@@ -181,6 +179,23 @@
                 </div>
                 <!--=================留言组件================-->
                 <mycomment></mycomment>
+            </div>
+            <!--======================回到顶部=====================-->
+            <div class="side-tool">
+                <ul>
+                    <li @click="returnTop" v-show="topbtnshow">
+                        <i class="fa fa-angle-up"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-plus"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-angle-up"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-angle-up"></i>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -207,9 +222,27 @@
         },
         data() {
             return {
-
+                topbtnshow:false,
+                likeshow:false,
+                num:50,
+                current:0
             }
         },
+        methods:{
+            // 回到顶部
+            returnTop: function () {
+                $('html').animate({scrollTop: 0}, 500);
+            },
+            gotoTop: function () {
+                let curHeight = document.documentElement.scrollTop || document.body.scrollTop;
+                if (curHeight > 100) this.topbtnshow = true;
+                else this.topbtnshow = false;
+            },
+
+        },
+        mounted:function () {
+            window.addEventListener('scroll',this.gotoTop);
+        }
     }
 </script>
 

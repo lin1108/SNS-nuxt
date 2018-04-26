@@ -1,22 +1,20 @@
 <template>
-    <div class=".comment-list">
-        <form action="" method="post" class="new-comment">
-            <slot></slot>
-            <textarea name="comment-content" id="" cols="30" rows="10" placeholder="写下你的评论...">
+    <form action="" method="post" class="new-comment">
+        <slot></slot>
+        <textarea name="comment-content" id="" cols="30" rows="10" placeholder="写下你的评论...">
             </textarea>
-            <div class="write-function-block">
-                <div class="emoji-modal-wrap">
-                    <a href="#" class="emoji">
-                        <i class="fa fa-smile-o"></i>
-                    </a>
-                    <div class="emoji-modal"></div>
-                </div>
-                <div class="hint">Ctrl+Enter发表</div>
-                <a href="#" class="btn-send">发送</a>
-                <a href="#" class="btn-cancel">取消</a>
+        <div class="write-function-block">
+            <div class="emoji-modal-wrap">
+                <a href="#" class="emoji">
+                    <i class="fa fa-smile-o"></i>
+                </a>
+                <div class="emoji-modal"></div>
             </div>
-        </form>
-    </div>
+            <div class="hint">Ctrl+Enter发表</div>
+            <a href="#" class="btn-send">发送</a>
+            <a href="#" class="btn-cancel">取消</a>
+        </div>
+    </form>
 </template>
 
 <script>
@@ -30,15 +28,12 @@
     }
 </script>
 
-<style scoped>
-    .comment-list{
-        padding-top: 20px;
-    }
-    .comment-list .new-comment{
+<style>
+    .new-comment{
         margin: 0 0 20px 56px;
         position: relative;
     }
-    .comment-list .new-comment .avatar{
+    .new-comment .avatar{
         width: 38px;
         height: 38px;
         position: absolute;
@@ -48,7 +43,7 @@
         margin-right: 10px;
         border: 1px solid #e1e1e1;
     }
-    .comment-list .new-comment textarea{
+    .new-comment textarea{
         padding: 10px 15px;
         width: 100%;
         height: 80px;
@@ -62,27 +57,27 @@
         border-radius: 4px;
         vertical-align: top;
     }
-    .comment-list .new-comment .write-function-block{
+    .new-comment .write-function-block{
         height: 50px;
     }
-    .comment-list .new-comment .write-function-block .emoji{
+    .new-comment .write-function-block .emoji{
         float: left;
         margin-top: 18px;
     }
-    .comment-list .new-comment .write-function-block .emoji i{
+    .new-comment .write-function-block .emoji i{
         font-size: 20px;
         color: #969696;
     }
-    .comment-list .new-comment .write-function-block .emoji i:hover{
+    .new-comment .write-function-block .emoji i:hover{
         color: #2f2f2f;
     }
-    .comment-list .new-comment .write-function-block .hint{
+    .new-comment .write-function-block .hint{
         float: left;
         margin: 20px 0 0 20px;
         font-size: 13px;
         color: #969696;
     }
-    .comment-list .new-comment .write-function-block .btn-send{
+    .new-comment .write-function-block .btn-send{
         float: right;
         width: 78px;
         padding: 8px 18px;
@@ -95,16 +90,16 @@
         border-radius: 20px;
         outline: none;
     }
-    .comment-list .new-comment .write-function-block .btn-send:hover{
+    .new-comment .write-function-block .btn-send:hover{
         background-color: #3db922;
     }
-    .comment-list .new-comment .write-function-block .btn-cancel{
+    .new-comment .write-function-block .btn-cancel{
         float: right;
         margin: 18px 30px 0 0;
         font-size: 16px;
         color: #969696;
     }
-    .comment-list .new-comment .write-function-block .btn-cancel:hover{
+    .new-comment .write-function-block .btn-cancel:hover{
         color: #2f2f2f;
     }
 </style>

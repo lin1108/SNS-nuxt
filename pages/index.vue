@@ -377,7 +377,33 @@
                                         {{followshow?'关注':followedshow?'已关注':'取消关注'}}
                                     </a>
                                     <nuxt-link to="/u/123" class="name">
-                                        作者
+                                        林无敌
+                                    </nuxt-link>
+                                    <p> 写了1958k字·1.9k喜欢</p>
+                                </li>
+                                <li>
+                                    <nuxt-link to="/" class="avatar">
+                                        <img src="~assets/img/author1.jpg" alt="">
+                                    </nuxt-link>
+                                    <a href="#" :class="followshow?'follow':'followed'" @click="followshow=!followshow" @mouseenter="!followshow&&followedshow?followedshow=false:followedshow=true" @mouseleave="!followshow&&followedshow?followedshow=true:followedshow=!followedshow">
+                                        <i :class="followshow?'fa fa-plus':followedshow?'fa fa-check':'fa fa-close'"></i>
+                                        {{followshow?'关注':followedshow?'已关注':'取消关注'}}
+                                    </a>
+                                    <nuxt-link to="/u/123" class="name">
+                                        林无敌
+                                    </nuxt-link>
+                                    <p> 写了1958k字·1.9k喜欢</p>
+                                </li>
+                                <li>
+                                    <nuxt-link to="/" class="avatar">
+                                        <img src="~assets/img/author1.jpg" alt="">
+                                    </nuxt-link>
+                                    <a href="#" :class="followshow?'follow':'followed'" @click="followshow=!followshow" @mouseenter="!followshow&&followedshow?followedshow=false:followedshow=true" @mouseleave="!followshow&&followedshow?followedshow=true:followedshow=!followedshow">
+                                        <i :class="followshow?'fa fa-plus':followedshow?'fa fa-check':'fa fa-close'"></i>
+                                        {{followshow?'关注':followedshow?'已关注':'取消关注'}}
+                                    </a>
+                                    <nuxt-link to="/u/123" class="name">
+                                        林无敌
                                     </nuxt-link>
                                     <p> 写了1958k字·1.9k喜欢</p>
                                 </li>
@@ -420,20 +446,18 @@
                         ©2012-2018 上海佰集信息科技有限公司 / 简书 / 沪ICP备11018329号-5 /
                         <a target="_blank"
                            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402002252">
-                            <img src="//cdn2.jianshu.io/assets/web/smrz-557fa318122c99a66523209bf9753a27.png"
-                                 alt="Smrz">
+                            <img src="~assets/img/bottom1.png" alt="Smrz">
                         </a>
                         <a target="_blank"
                            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402002252">
                             沪公网安备31010402002252号 / </a>
                         <a target="_blank" href="http://www.shjbzx.cn/">
-                            <img src="//cdn2.jianshu.io/assets/web/wxb-a216456895eb66c17497dbd3da443cf8.png" alt="Wxb">
+                            <img src="~assets/img/bottom2.png" alt="Wxb">
                         </a>
                         举报电话：021-34770013 /
                         <a target="_blank"
                            href="http://218.242.124.22:8081/businessCheck/verifKey.do?showType=extShow&amp;serial=9031000020171107081457000002158769-SAIC_SHOW_310000-20171115131223587837&amp;signData=MEQCIADWZ5aTcBeER5SOVp0ly+ElvKnwtjczum6Gi6wZ7/wWAiB9MAPM22hp947ZaBobux5PDkd0lfqoCOkVV7zjCYME6g==">
-                            <img src="//cdn2.jianshu.io/assets/web/zggsrz-5695587dccf490ca3e651f4228f7479e.png"
-                                 alt="Zggsrz">
+                            <img src="~assets/img/bottom3.png" alt="Zggsrz">
                         </a>
                     </div>
                 </div>
@@ -502,7 +526,7 @@
             },
             gotoTop:function () {
                 let curHeight = document.documentElement.scrollTop || document.body.scrollTop;
-                if (curHeight > 50) this.topbtnshow = true;
+                if (curHeight > 100) this.topbtnshow = true;
                 else this.topbtnshow = false;
             }
         },

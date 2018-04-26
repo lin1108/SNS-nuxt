@@ -18,6 +18,7 @@
     "bootstrap-vue": "^2.0.0-rc.8",
     "cross-env": "^5.0.1",
     "express": "^4.15.3",
+    "hsy-vue-tooltip": "0.0.7",
     "jquery": "^3.3.1",
     "normalize.css": "^8.0.0",
     "nuxt": "^1.0.0-rc3",
