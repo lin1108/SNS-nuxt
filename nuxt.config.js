@@ -14,6 +14,9 @@ module.exports = {
             {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
         ]
     },
+    plugins:[
+        {src:'~/plugins/myPlugins',ssr:false}
+    ],
     /*
     ** Global CSS
     */
@@ -21,7 +24,9 @@ module.exports = {
         '~/assets/css/main.css',
         '~/assets/css/animate.css',
         '~/assets/css/font-awesome.css',
-        '~/assets/css/index.css'
+        './assets/css/iconfont/iconfont.css',
+        '~/assets/css/index.css',
+        '~/assets/css/tooltip.css'
     ],
     /*
     ** Add axios globally

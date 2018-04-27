@@ -163,17 +163,39 @@
                         </div>
                     </div>
                     <div class="share">
-                        <a href="#" class="share-btn">
+                        <a href="#" class="share-btn" v-tooltip="'分享到微信'">
                             <i class="fa fa-weixin"></i>
                         </a>
-                        <a href="#" class="share-btn">
+                        <a href="#" class="share-btn" v-tooltip="'分享到微博'">
                             <i class="fa fa-weibo"></i>
                         </a>
-                        <a href="#" class="share-btn">
+                        <a href="#" class="share-btn" v-tooltip="'分享到qq'">
                             <i class="fa fa-qq"></i>
                         </a>
-                        <a href="#" class="share-btn more-share">
-                            更多分享
+                        <a href="javascript:;" class="share-btn more-share">
+                            <v-popover offset="15">
+                                <span>更多分享</span>
+                                <template slot="popover">
+                                    <ul>
+                                        <li>
+                                            <i class="iconfont icon-qqkongjian" style="color:#eebf13"></i>
+                                            分享到QQ空间
+                                        <li>
+                                            <i class="iconfont icon-twitter" style="color:#00aaec"></i>
+                                            分享到Twitter
+                                        <li>
+                                            <i class="iconfont icon-Facebook" style="color: #4460a0"></i>
+                                            分享到Facebook
+                                        <li>
+                                            <i class="iconfont icon-googleplus" style="color:#f9402e"></i>
+                                            分享到Google+
+                                        <li>
+                                            <i class="iconfont icon-douban" style="color:#3f902d"></i>
+                                            分享到豆瓣
+                                        </li>
+                                    </ul>
+                                </template>
+                            </v-popover>
                         </a>
                     </div>
                 </div>
@@ -183,17 +205,17 @@
             <!--======================回到顶部=====================-->
             <div class="side-tool">
                 <ul>
-                    <li @click="returnTop" v-show="topbtnshow">
-                        <i class="fa fa-angle-up"></i>
+                    <li @click="returnTop" v-show="topbtnshow" v-tooltip.left="'回到顶部'" >
+                        <i class="iconfont icon-huidaodingbu"></i>
                     </li>
-                    <li>
-                        <i class="fa fa-plus"></i>
+                    <li v-tooltip.left="'将文章加入专题'">
+                        <i class="iconfont icon-tianjia"></i>
                     </li>
-                    <li>
-                        <i class="fa fa-angle-up"></i>
+                    <li v-tooltip.left="'收藏文章'">
+                        <i class="iconfont icon-favorite"></i>
                     </li>
-                    <li>
-                        <i class="fa fa-angle-up"></i>
+                    <li v-tooltip.left="'分享文章'">
+                        <i class="iconfont icon-share"></i>
                     </li>
                 </ul>
             </div>

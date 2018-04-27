@@ -331,8 +331,6 @@
             background-position: right;
         }
     }
-
-
     .comment-list .comment .comment-wrap .tool-group>a.comment-btn:hover{
         color: #2f2f2f;
     }

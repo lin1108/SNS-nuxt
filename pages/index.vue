@@ -5,6 +5,9 @@
             <div class="row">
                 <!--====================热门专题以及文章列表===================-->
                 <div class="col-xs-16 main">
+                    <div class="index-carousel">
+                        <img src="~assets/img/main.png" alt="">
+                    </div>
                     <!--====热门专题====-->
                     <div class="recommend-collection">
                         <nuxt-link to="/collection/123" class="collection">
@@ -60,19 +63,14 @@
                                                 <nuxt-link to="/" class="nickname">
                                                     林无敌
                                                 </nuxt-link>
-                                                <a href="http://www.jianshu.com/p/d1d89ed69098" target="_blank"
-                                                   class="icon-tag" @mouseenter="showTitle=true"
-                                                   @mouseleave="showTitle=false">
-                                                    <img src="~assets/img/star-tag.jpg" alt="">
+                                                <a href="http://www.jianshu.com/p/d1d89ed69098" target="_blank" class="icon-tag">
+                                                    <img src="~assets/img/star-tag.jpg" alt="" v-tooltip="'简书优秀游戏作者'">
                                                 </a>
                                                 <span class="time">04.23 10:20</span>
                                             </div>
-                                            <div class="icon-title" v-show="showTitle">
-                                                简书游戏优秀作者
-                                            </div>
-                                            <div class="caret-down" v-show="showTitle">
-                                                <i class="fa fa-caret-down"></i>
-                                            </div>
+                                            <!--<div class="icon-title">-->
+                                                <!--简书游戏优秀作者-->
+                                            <!--</div>-->
                                         </div>
                                         <nuxt-link class="title" to="/p/123">
                                             三世断桥之白浪梦迷 第七章 望海镇
@@ -117,18 +115,10 @@
                                                 <nuxt-link to="/" class="nickname">
                                                     范傻比
                                                 </nuxt-link>
-                                                <a href="http://www.jianshu.com/p/9cb2014de249" target="_blank"
-                                                   class="icon-tag" @mouseenter="showTitle=true"
-                                                   @mouseleave="showTitle=false">
-                                                    <img src="~assets/img/yes-tag.jpg" alt="">
+                                                <a href="http://www.jianshu.com/p/9cb2014de249" target="_blank" class="icon-tag">
+                                                    <img src="~assets/img/yes-tag.jpg" alt="" v-tooltip="'简书认证群主'">
                                                 </a>
                                                 <span class="time">04.23 19:20</span>
-                                            </div>
-                                            <div class="icon-title" v-show="showTitle">
-                                                简书认证群主
-                                            </div>
-                                            <div class="caret-down" v-show="showTitle">
-                                                <i class="fa fa-caret-down"></i>
                                             </div>
                                         </div>
                                         <nuxt-link class="title" to="">二胎辣妈，每月五万字：在写作里，我是那个自律的“疯子”</nuxt-link>
@@ -168,18 +158,10 @@
                                                 <nuxt-link to="/" class="nickname">
                                                     范傻比
                                                 </nuxt-link>
-                                                <a href="http://www.jianshu.com/p/9cb2014de249" target="_blank"
-                                                   class="icon-tag" @mouseenter="showTitle=true"
-                                                   @mouseleave="showTitle=false">
-                                                    <img src="~assets/img/yes-tag.jpg" alt="">
+                                                <a href="http://www.jianshu.com/p/9cb2014de249" target="_blank" class="icon-tag">
+                                                    <img src="~assets/img/yes-tag.jpg" alt="" v-tooltip="'简书认证群主'">
                                                 </a>
                                                 <span class="time">04.23 19:20</span>
-                                            </div>
-                                            <div class="icon-title" v-show="showTitle">
-                                                简书认证群主
-                                            </div>
-                                            <div class="caret-down" v-show="showTitle">
-                                                <i class="fa fa-caret-down"></i>
                                             </div>
                                         </div>
                                         <nuxt-link class="title" to="">二胎辣妈，每月五万字：在写作里，我是那个自律的“疯子”</nuxt-link>
@@ -219,18 +201,10 @@
                                                 <nuxt-link to="/" class="nickname">
                                                     范傻比
                                                 </nuxt-link>
-                                                <a href="http://www.jianshu.com/p/9cb2014de249" target="_blank"
-                                                   class="icon-tag" @mouseenter="showTitle=true"
-                                                   @mouseleave="showTitle=false">
-                                                    <img src="~assets/img/yes-tag.jpg" alt="">
+                                                <a href="http://www.jianshu.com/p/9cb2014de249" target="_blank" class="icon-tag">
+                                                    <img src="~assets/img/yes-tag.jpg" alt="" v-tooltip="'简书认证群主'">
                                                 </a>
                                                 <span class="time">04.23 19:20</span>
-                                            </div>
-                                            <div class="icon-title" v-show="showTitle">
-                                                简书认证群主
-                                            </div>
-                                            <div class="caret-down" v-show="showTitle">
-                                                <i class="fa fa-caret-down"></i>
                                             </div>
                                         </div>
                                         <nuxt-link class="title" to="">二胎辣妈，每月五万字：在写作里，我是那个自律的“疯子”</nuxt-link>
@@ -270,18 +244,10 @@
                                                 <nuxt-link to="/" class="nickname">
                                                     范傻比
                                                 </nuxt-link>
-                                                <a href="http://www.jianshu.com/p/9cb2014de249" target="_blank"
-                                                   class="icon-tag" @mouseenter="showTitle=true"
-                                                   @mouseleave="showTitle=false">
-                                                    <img src="~assets/img/yes-tag.jpg" alt="">
+                                                <a href="http://www.jianshu.com/p/9cb2014de249" target="_blank" class="icon-tag">
+                                                    <img src="~assets/img/yes-tag.jpg" alt="" v-tooltip="'简书认证群主'">
                                                 </a>
                                                 <span class="time">04.23 19:20</span>
-                                            </div>
-                                            <div class="icon-title" v-show="showTitle">
-                                                简书认证群主
-                                            </div>
-                                            <div class="caret-down" v-show="showTitle">
-                                                <i class="fa fa-caret-down"></i>
                                             </div>
                                         </div>
                                         <nuxt-link class="title" to="">二胎辣妈，每月五万字：在写作里，我是那个自律的“疯子”</nuxt-link>
