@@ -69,8 +69,8 @@
                         </div>
                     </div>
                     <div class="sub-comment more-comment">
-                        <a href="#" class="more-comment-btn">
-                            <i class="fa fa-edit"></i>
+                        <a href="javascript:;" class="more-comment-btn" @click="writeshow=!writeshow">
+                            <i class="iconfont icon-pinglun"></i>
                             <span>添加新评论</span>
                         </a>
                     </div>
@@ -93,6 +93,7 @@
             return{
                 likeclick:false,
                 num:10,
+                writeshow:false,
                 comments:[
                     {
                         id:19935725,
@@ -261,7 +262,7 @@
     .comment-list .normal-comment-list .top-title .pull-right a.active{
         color: #2f2f2f;
     }
-    .comment-list .comment{
+    .comment-list .normal-comment-list .comment{
         padding: 20px 0 30px 0;
         border-bottom: 1px solid #f0f0f0;
     }

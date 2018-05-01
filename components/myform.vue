@@ -1,28 +1,59 @@
 <template>
     <form action="" method="post" class="new-comment">
         <slot></slot>
-        <textarea name="comment-content" id="" cols="30" rows="10" placeholder="写下你的评论...">
-            </textarea>
-        <div class="write-function-block">
+        <textarea name="comment-content" placeholder="写下你的评论..." v-model="value" @click="writeshow=true">
+
+        </textarea>
+        <div class="write-function-block" v-show="writeshow">
             <div class="emoji-modal-wrap">
-                <a href="#" class="emoji">
+                <a href="javascript:;" class="emoji" @click="showEmoji = !showEmoji">
                     <i class="fa fa-smile-o"></i>
                 </a>
-                <div class="emoji-modal"></div>
+                <div class="emoji-modal">
+                    <transition name="fade">
+                        <div class="emoji-box" v-if="showEmoji" >
+                            <!--<el-button class="pop-close" :plain="true" type="danger" size="mini" icon="close" @click="showEmoji = false"></el-button>-->
+                            <emoji @select="selectEmoji"></emoji>
+                            <span class="pop-arrow arrow"></span>
+                        </div>
+                    </transition>
+                </div>
             </div>
             <div class="hint">Ctrl+Enter发表</div>
-            <a href="#" class="btn-send">发送</a>
-            <a href="#" class="btn-cancel">取消</a>
+            <a href="javascript:;" class="btn-send" @click="submit">发送</a>
+            <a href="javascript:;" class="btn-cancel">取消</a>
+            <transition-group tag="div" name="list" class="comment">
+                <p v-for="(item,index) in data" :key="index" class="item">
+                    <span v-html="emoji(item)"></span>
+                </p>
+            </transition-group>
         </div>
     </form>
 </template>
 
 <script>
+    import emoji from '~/components/emoji'
     export default {
         name: "myform",
+        components:{
+            emoji
+        },
         data () {
             return{
-
+                writeshow:false,
+                value: '',
+                showEmoji: false,
+                data: []
+            }
+        },
+        methods: {
+            selectEmoji (code) {
+                this.showEmoji = false
+                this.value += code
+            },
+            submit () {
+                this.data.push(this.value)
+                this.value = ''
             }
         }
     }
@@ -59,6 +90,7 @@
     }
     .new-comment .write-function-block{
         height: 50px;
+        border-bottom: none;
     }
     .new-comment .write-function-block .emoji{
         float: left;
@@ -102,4 +134,20 @@
     .new-comment .write-function-block .btn-cancel:hover{
         color: #2f2f2f;
     }
+
+    .clearfix:after {
+        content: '';
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    .fade-enter-active, .fade-leave-active { transition: opacity .5s; }
+    .fade-enter, .fade-leave-active { opacity: 0; }
+    .fade-move { transition: transform .4s; }
+
+    .list-enter-active, .list-leave-active { transition: all .5s; }
+    .list-enter, .list-leave-active { opacity: 0; transform: translateX(30px); }
+    .list-leave-active { position: absolute !important; }
+    .list-move { transition: all .5s;}
 </style>

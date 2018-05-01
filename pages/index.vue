@@ -121,7 +121,7 @@
                                                 <span class="time">04.23 19:20</span>
                                             </div>
                                         </div>
-                                        <nuxt-link class="title" to="">二胎辣妈，每月五万字：在写作里，我是那个自律的“疯子”</nuxt-link>
+                                        <nuxt-link class="title" to="/">二胎辣妈，每月五万字：在写作里，我是那个自律的“疯子”</nuxt-link>
                                         <div class="abstruct">
                                             因为热爱，所以疯狂。 2018.3.7 文/与君成悦 01 大宝幼儿园开学了，等了一个假期，终于等到了这一天，我像是看到了希望似的，开心极了。
                                             凌乱喧闹的假期，她一会儿一个妈...
@@ -387,7 +387,7 @@
         <div class="side-tool">
             <ul>
                 <li @click="returnTop" v-show="topbtnshow">
-                    <i class="fa fa-angle-up"></i>
+                    <i class="iconfont icon-huidaodingbu"></i>
                 </li>
             </ul>
         </div>

@@ -215,7 +215,7 @@
                         <i class="iconfont icon-favorite"></i>
                     </li>
                     <li v-tooltip.left="'分享文章'">
-                        <i class="iconfont icon-share"></i>
+                        <i class="iconfont icon-fenxiang"></i>
                     </li>
                 </ul>
             </div>

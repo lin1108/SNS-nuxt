@@ -19,14 +19,14 @@
                     </div>
                     <ul class="drop-menu" v-show="isShow">
                         <li>
-                            <nuxt-link to="/">
-                                <i class="fa fa-home"></i>
+                            <nuxt-link to="/u/my">
+                                <i class="iconfont icon-user"></i>
                                 我的主页
                             </nuxt-link>
                         </li>
                         <li>
                             <nuxt-link to="/bookmarks">
-                                <i class="fa fa-bookmark"></i>
+                                <i class="iconfont icon-shuqian"></i>
                                 收藏的文章
                             </nuxt-link>
                         </li>
@@ -38,13 +38,13 @@
                         </li>
                         <li>
                             <nuxt-link to="/bookmarks">
-                                <i class="fa fa-diamond"></i>
+                                <i class="iconfont icon-diamond"></i>
                                 已购内容
                             </nuxt-link>
                         </li>
                         <li>
                             <nuxt-link to="/bookmarks">
-                                <i class="fa fa-money"></i>
+                                <i class="iconfont icon-qianbao"></i>
                                 我的钱包
                             </nuxt-link>
                         </li>
@@ -88,7 +88,7 @@
                         </li>
                         <!--消息及下拉菜单~同头像的下拉菜单-->
                         <li class="user" @mouseenter="modifyShow=true" @mouseleave="modifyShow=false">
-                            <nuxt-link to="/notify">
+                            <nuxt-link to="/message">
                                 <i class="fa fa-bell-o"></i>
                                 <span>消息</span>
                             </nuxt-link>
