@@ -1,10 +1,10 @@
 <template>
-
+    <div>frfyrrrrrrrrrrrrrrrrrrrrrrrrrrrrr</div>
 </template>
 
 <script>
     export default {
-        name: "message"
+        name: "common"
     }
 </script>
 

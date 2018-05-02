@@ -21,7 +21,7 @@
             </div>
             <div class="hint">Ctrl+Enter发表</div>
             <a href="javascript:;" class="btn-send" @click="submit">发送</a>
-            <a href="javascript:;" class="btn-cancel">取消</a>
+            <a href="javascript:;" class="btn-cancel" @click="writeshow=false">取消</a>
             <transition-group tag="div" name="list" class="comment">
                 <p v-for="(item,index) in data" :key="index" class="item">
                     <span v-html="emoji(item)"></span>
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-    import emoji from '~/components/emoji'
+    import emoji from '~/components/detailpage/emoji'
     export default {
         name: "myform",
         components:{
@@ -40,6 +40,7 @@
         },
         data () {
             return{
+                formshow:true,
                 writeshow:false,
                 value: '',
                 showEmoji: false,
@@ -61,7 +62,6 @@
 
 <style>
     .new-comment{
-        margin: 0 0 20px 56px;
         position: relative;
     }
     .new-comment .avatar{

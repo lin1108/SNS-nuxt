@@ -225,7 +225,7 @@
 
 <script>
     import myheader from '~/components/myheader';
-    import mycomment from '~/components/mycomment';
+    import mycomment from '~/components/detailpage/mycomment';
 
     export default {
         name: "id",

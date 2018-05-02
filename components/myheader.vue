@@ -73,65 +73,65 @@
                     <div class="row">
                         <ul class="nav-list">
                         <!--发现-->
-                        <li class="find">
-                            <nuxt-link to="/" class="active">
+                        <li class="find" @click="navmenu='index'">
+                            <nuxt-link to="/" :class="navmenu=='index'?'active':''">
                                 <i class="fa fa-compass"> </i>
                                 <span>发现</span>
                             </nuxt-link>
                         </li>
                         <!--关注-->
-                        <li class="watch">
-                            <nuxt-link to="/follow">
+                        <li class="watch" @click="navmenu='follow'">
+                            <nuxt-link to="/followed/friendcircle" :class="navmenu=='follow'?'active':''">
                                 <i class="fa fa-book"></i>
                                 <span>关注</span>
                             </nuxt-link>
                         </li>
                         <!--消息及下拉菜单~同头像的下拉菜单-->
-                        <li class="user" @mouseenter="modifyShow=true" @mouseleave="modifyShow=false">
-                            <nuxt-link to="/message">
+                        <li class="user" @mouseenter="modifyShow=true" @mouseleave="modifyShow=false" @click="navmenu='notify'">
+                            <nuxt-link to="/notify/comments" :class="navmenu=='notify'?'active':''">
                                 <i class="fa fa-bell-o"></i>
                                 <span>消息</span>
                             </nuxt-link>
                             <ul class="drop-menu" v-show="modifyShow">
                                 <li>
-                                    <nuxt-link to="/">
-                                        <i class="fa fa-comment-o"></i>
+                                    <nuxt-link to="/notify/comments">
+                                        <i class="iconfont icon-comment1"></i>
                                         评论
                                     </nuxt-link>
                                 </li>
                                 <li>
-                                    <nuxt-link to="/">
-                                        <i class="fa fa-envelope-o"></i>
+                                    <nuxt-link to="/notify/chats">
+                                        <i class="iconfont icon-icon"></i>
                                         简信
                                     </nuxt-link>
                                 </li>
                                 <li>
-                                    <nuxt-link to="/">
-                                        <i class="fa fa-upload"></i>
+                                    <nuxt-link to="/notify/requests">
+                                        <i class="iconfont icon-shangchuan"></i>
                                         投稿请求
                                     </nuxt-link>
                                 </li>
                                 <li>
-                                    <nuxt-link to="/">
-                                        <i class="fa fa-heart-o"></i>
+                                    <nuxt-link to="/notify/likes">
+                                        <i class="iconfont icon-like1"></i>
                                         喜欢和赞
                                     </nuxt-link>
                                 </li>
                                 <li>
-                                    <nuxt-link to="/">
-                                        <i class="fa fa-user-plus"></i>
+                                    <nuxt-link to="/notify/follows">
+                                        <i class="iconfont icon-yiguanzhu"></i>
                                         关注
                                     </nuxt-link>
                                 </li>
                                 <li>
-                                    <nuxt-link to="/">
-                                        <i class="fa fa-rmb"></i>
+                                    <nuxt-link to="/notify/money">
+                                        <i class="iconfont icon-money"></i>
                                         赞赏和付费
                                     </nuxt-link>
                                 </li>
                                 <li>
-                                    <nuxt-link to="/">
-                                        <i class="fa fa-ellipsis-h"></i>
+                                    <nuxt-link to="/notify/others">
+                                        <i class="iconfont icon-qita"></i>
                                         其它提醒
                                     </nuxt-link>
                                 </li>
@@ -221,7 +221,8 @@
                 isShow:false,
                 modifyShow:false,
                 menuShow:false,
-                modeShow:false
+                modeShow:false,
+                navmenu:'index'
             }
         },
         methods:{
@@ -285,7 +286,7 @@
     }
 </script>
 
-<style scoped>
+<style>
     /*****************************导航条左右两侧******************************/
     nav{
         background-color: #fff;
@@ -333,21 +334,21 @@
         background-color: #ec6149;
     }
     /****头像及下拉菜单部分*****/
-    nav .user{
+    .user{
         position: relative;
         float: right;
     }
-    nav .user .avatar{
+    .user .avatar{
         position: relative;
         display: block;
         width: 40px;
         height: 40px;
         margin: 8px 28px 8px 20px;
     }
-    nav .user:hover{
+    .user:hover{
         background-color: #f5f5f5;
     }
-    nav .user .avatar:before{
+    .user .avatar:before{
         content: '';
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
@@ -356,13 +357,13 @@
         top: 18px;
         right: -14px;
     }
-    nav .user .avatar img{
+    .user .avatar img{
         width: 100%;
         height: 100%;
         border-radius: 50%;
         border: 1px solid #eee;
     }
-    nav .user .drop-menu{
+    .user .drop-menu{
         position: absolute;
         left: 0;
         box-shadow: 0 0 8px rgba(0,0,0,.1);
@@ -373,20 +374,21 @@
         font-size: 15px;
         background-color: #fff;
     }
-    nav .user .drop-menu li a{
+    .user .drop-menu li a{
         padding: 10px 20px;
         line-height: 30px;
         display: block;
     }
-    nav .user .drop-menu li a:hover{
+    .user .drop-menu li a:hover{
         background-color: #f5f5f5;
     }
-    nav .user .drop-menu li a i{
+    .user .drop-menu li a i{
         color: #ea6f5a;
         margin-right: 10px;
         font-size: 20px;
         width: 20px;
         height: 20px;
+        vertical-align: middle;
     }
 
     /*****************************导航条中间部分*******************************/

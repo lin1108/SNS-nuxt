@@ -1,0 +1,33 @@
+.leftaside {
+    padding: 0 0 30px;
+    overflow: auto;
+}
+
+.leftaside ul li {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.leftaside ul li.active {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+.leftaside ul li:hover {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+.leftaside ul li a {
+    height: auto;
+    padding: 0 25px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+.leftaside ul li i {
+    margin-right: 15px;
+    font-size: 24px;
+    color: #ea6f5a;
+    vertical-align: middle;
+}

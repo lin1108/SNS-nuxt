@@ -311,6 +311,7 @@
                                     <img src="~assets/img/aside5.png" alt="">
                                 </div>
                             </nuxt-link>
+
                         </div>
                         <!--=========推荐作者=========-->
                         <div class="recommend-author">
@@ -326,15 +327,15 @@
                                     <nuxt-link to="/" class="avatar">
                                         <img src="~assets/img/author1.jpg" alt="">
                                     </nuxt-link>
-                                    <!--<a href="#" class="follow" v-if="follow" @click="followedshow">-->
+                                    <!--<a href="#" class="followed" v-if="followed" @click="followedshow">-->
                                         <!--<i class="fa fa-plus"></i>-->
                                         <!--关注-->
                                     <!--</a>-->
-                                    <!--<a href="#" class="follow followed" v-if="followed" @mouseenter="unfollowedshow">-->
+                                    <!--<a href="#" class="followed followed" v-if="followed" @mouseenter="unfollowedshow">-->
                                         <!--<i class="fa fa-check"></i>-->
                                         <!--已关注-->
                                     <!--</a>-->
-                                    <!--<a href="#" class="follow followed" v-if="unfollowed" @click="followshow" @mouseleave="unfollowedhide">-->
+                                    <!--<a href="#" class="followed followed" v-if="unfollowed" @click="followshow" @mouseleave="unfollowedhide">-->
                                         <!--<i class="fa fa-close"></i>-->
                                         <!--取消关注-->
                                     <!--</a>-->
@@ -454,7 +455,7 @@
                 showTitle: false,
                 codeshow: false,
                 degree: 0,
-                // follow: true,
+                // followed: true,
                 // followed: false,
                 // unfollowed: false,
                 followshow:true,
@@ -471,7 +472,7 @@
                 this.degree = this.degree + 360;
             },
             // followedshow: function () {
-            //     this.follow = false;
+            //     this.followed = false;
             //     this.followed = true;
             // },
             // unfollowedshow: function () {
@@ -483,7 +484,7 @@
             //     this.unfollowed = false;
             // },
             // followshow: function () {
-            //     this.follow = true;
+            //     this.followed = true;
             //     this.unfollowed = false;
             // }
 

@@ -27,7 +27,7 @@
     </div>
 </template>
 <script>
-    import data from '../data/emoji-data.js'
+    import data from '../../data/emoji-data.js'
 
     export default {
         name: 'emoji',
@@ -60,7 +60,7 @@
 </script>
 
 <style lang='scss' scoped>
-    @import '../assets/scss/emoji-sprite.scss';
+    @import '../../assets/scss/emoji-sprite';
 
     .emoji {
         width: 380px;

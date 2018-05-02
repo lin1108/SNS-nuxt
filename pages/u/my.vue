@@ -136,10 +136,10 @@
 
 <script>
     import myheader from '~/components/myheader';
-    import articles from '~/components/articles';
-    import dynamic from '~/components/dynamic';
-    import comment from '~/components/comment';
-    import hot from '~/components/hot';
+    import articles from '~/components/homepage/articles';
+    import dynamic from '~/components/homepage/dynamic';
+    import comment from '~/components/homepage/comment';
+    import hot from '~/components/homepage/hot';
 
     export default {
         name: "my",

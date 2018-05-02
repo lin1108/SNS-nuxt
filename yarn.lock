@@ -237,7 +237,7 @@ axios@^0.16.2:
   version "0.16.2"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.16.2.tgz#ba4f92f17167dfbab40983785454b9ac149c3c6d"
   dependencies:
-    follow-redirects "^1.2.3"
+    followed-redirects "^1.2.3"
     is-buffer "^1.1.5"
 
 babel-code-frame@^6.11.0, babel-code-frame@^6.22.0:
@@ -2250,7 +2250,7 @@ flatten@^1.0.2:
 
 follow-redirects@^1.2.3:
   version "1.2.4"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.2.4.tgz#355e8f4d16876b43f577b0d5ce2668b9723214ea"
+  resolved "https://registry.yarnpkg.com/followed-redirects/-/followed-redirects-1.2.4.tgz#355e8f4d16876b43f577b0d5ce2668b9723214ea"
   dependencies:
     debug "^2.4.5"
 
@@ -3834,7 +3834,7 @@ postcss-calc@^5.2.0:
   resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-5.3.1.tgz#77bae7ca928ad85716e2fda42f261bf7c1d65b5e"
   dependencies:
     postcss "^5.0.2"
-    postcss-message-helpers "^2.0.0"
+    postcss-notify-helpers "^2.0.0"
     reduce-css-calc "^1.2.6"
 
 postcss-colormin@^2.1.8:
@@ -3939,7 +3939,7 @@ postcss-merge-rules@^2.0.3:
 
 postcss-message-helpers@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-message-helpers/-/postcss-message-helpers-2.0.0.tgz#a4f2f4fab6e4fe002f0aed000478cdf52f9ba60e"
+  resolved "https://registry.yarnpkg.com/postcss-notify-helpers/-/postcss-notify-helpers-2.0.0.tgz#a4f2f4fab6e4fe002f0aed000478cdf52f9ba60e"
 
 postcss-minify-font-values@^1.0.2:
   version "1.0.5"

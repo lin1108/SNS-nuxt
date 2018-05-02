@@ -75,7 +75,7 @@
                         </a>
                     </div>
 
-                    <myform></myform>
+                    <myform v-show="writeshow"></myform>
                 </div>
             </div>
         </div>
@@ -83,7 +83,7 @@
 </template>
 
 <script>
-    import myform from '~/components/myform';
+    import myform from '~/components/detailpage/myform';
     export default {
         name: "mycomment",
         components:{
@@ -230,6 +230,9 @@
     .comment-list{
         padding-top: 20px;
     }
+    .comment-list form{
+        margin: 0 0 20px 56px;
+    }
     .comment-list .normal-comment-list{
         margin-top: 30px;
     }
@@ -309,7 +312,7 @@
         position: absolute;
         left: -16px;
         top: -16px;
-        background: url("../assets/img/zan.png") left no-repeat;
+        background: url("../../assets/img/zan.png") left no-repeat;
         background-size: 1050px 50px;
     }
     .comment-list .comment .comment-wrap .like-btn:hover span{

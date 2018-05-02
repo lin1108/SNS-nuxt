@@ -1,0 +1,226 @@
+.notification .row {
+    padding: 30px 0;
+}
+
+.notification .main .menu {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.notification .main ul li {
+    padding: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.notification .main ul li .avatar {
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+.notification .main ul li .avatar > img {
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+.notification .main ul li .info {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.notification .main ul li .info .username {
+    margin: 0 5px 0 0;
+    color: #2f2f2f;
+}
+
+.notification .main ul li .info a {
+    color: #3194d0;
+}
+.notification .main ul.follow-list li .info a,
+.notification .main ul.like-list li .info a{
+    color: #333;
+}
+.notification .main ul.like-list li .info a.note{
+    color: #3194D0;
+}
+.notification .main ul li .info .time {
+    font-size: 12px;
+    color: #969696;
+}
+
+.notification .main ul li p {
+    margin: 10px 0 0;
+    font-size: 15px;
+}
+
+.notification .main ul li p a {
+    margin-right: 5px;
+    color: #3194d0;
+}
+
+.notification .main ul li .meta {
+    margin-top: 10px;
+    height: 20px;
+}
+
+.notification .main ul li .meta .fun-btn {
+    float: left;
+    margin-right: 30px;
+    font-size: 13px;
+    color: #969696;
+    cursor: pointer;
+}
+
+.notification .main ul li .meta .fun-btn i {
+    margin-right: 5px;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.notification .main ul li .meta .report {
+    float: right;
+    font-size: 13px;
+    color: #969696;
+}
+
+.notification .main ul li .meta a:hover {
+    color: #2f2f2f;
+}
+/************简信*************/
+.notification .main .chat-list li{
+    position: relative;
+}
+.notification .main .chat-list .avatar{
+    float: left;
+    margin: 0 10px 0 0;
+    width: 48px;
+    height: 48px;
+}
+.notification .main .chat-list .name{
+    position: absolute;
+    top: 25px;
+    font-size: 15px;
+}
+.notification .main .chat-list .wrap{
+    padding: 20px 20px 20px 0;
+    min-height: 88px;
+}
+.notification .main .chat-list .wrap p{
+    position: absolute;
+    top: 37px;
+    left: 78px;
+    font-size: 13px;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 520px;
+}
+.notification .main .chat-list .pull-right{
+    margin: 5px 0 0;
+    font-size: 13px;
+    float: right;
+    color: #999;
+    position: relative;
+}
+.notification .main .chat-list .pull-right>i{
+    font-size: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.notification .main .chat-list .pull-right .dropdown-menu{
+    position: absolute;
+    right: -2px;
+    top: 22px;
+    z-index: 5;
+    background-color: #fff;
+    width: 135px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
+    padding: 5px 0;
+    border-radius: 4px;
+}
+.notification .main .chat-list .pull-right .dropdown-menu li{
+    border: none;
+    padding: 10px 20px;
+    color: #333;
+}
+.notification .main .chat-list .pull-right .dropdown-menu li i{
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.notification .main .chat-list .pull-right .dropdown-menu li:hover{
+    background-color: #f6f6f6;
+    cursor: pointer;
+}
+/************投稿请求***********/
+.notification .main .request-list li{
+    padding: 34px 20px;
+}
+.notification .main .request-list .wrap{
+    padding: 20px 0;
+}
+.notification .main .request-list .wrap i{
+    margin-top: 14px;
+    font-size: 25px;
+    color: #ea6f5a;
+    vertical-align: middle;
+    margin-right: 15px;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #f4f4f4;
+    border-radius: 4px;
+    padding: 10px;
+}
+.notification .main .request-list .wrap span{
+    font-size: 15px;
+    vertical-align: middle;
+}
+/*********************关注********************/
+.notification .main .btn.follow-btn{
+    padding: 8px 0;
+    width: 100px;
+    float: right;
+    font-size: 15px;
+    border: 1px solid #42c02e;
+    background-color: #42c02e;
+    color: #fff;
+    border-radius: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.notification .main .btn.follow-btn i{
+    margin-right: 3px;
+    font-weight: 100;
+}
+.notification .main .btn.follow-btn:hover{
+    background-color: #3db922;
+}
+.notification .main .btn.follow-btn.followed{
+    color: #8c8c8c;
+    border-color: #8c8c8c;
+    background-color: #fff;
+}
+.notification .main .btn.follow-btn.unfollow{
+    color: #8c8c8c;
+    border-color: #8c8c8c;
+    background-color: #f7f7f7;
+}
+/**************赞赏和付费、其他提醒*******************/
+.notification .main .nothing{
+    margin-top: 100px;
+    text-align: center;
+}
+.notification .main .nothing img{
+    width: 100px;
+}
+.notification .main .nothing p{
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 700;
+}
