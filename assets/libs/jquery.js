@@ -1250,7 +1250,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 				"<option selected=''></option></select>";
 
 			// Support: IE8, Opera 11-12.16
-			// Nothing should be selected when empty strings followed ^= or $= or *=
+			// Nothing should be selected when empty strings follow ^= or $= or *=
 			// The test attribute must be unknown in Opera but "safe" for WinRT
 			// https://msdn.microsoft.com/en-us/library/ie/hh465388.aspx#attribute_section
 			if ( el.querySelectorAll("[msallowcapture^='']").length ) {
@@ -1964,7 +1964,7 @@ Expr = Sizzle.selectors = {
 		// "Whether an element is represented by a :lang() selector
 		// is based solely on the element's language value
 		// being equal to the identifier C,
-		// or beginning with the identifier C immediately followed by "-".
+		// or beginning with the identifier C immediately follow by "-".
 		// The matching of C against the element's language value is performed case-insensitively.
 		// The identifier C does not have to be a valid language name."
 		// http://www.w3.org/TR/selectors/#lang-pseudo
@@ -2697,7 +2697,7 @@ support.detectDuplicates = !!hasDuplicate;
 setDocument();
 
 // Support: Webkit<537.32 - Safari 6.0.3/Chrome 25 (fixed in Chrome 27)
-// Detached nodes confoundingly followed *each other*
+// Detached nodes confoundingly follow *each other*
 support.sortDetached = assert(function( el ) {
 	// Should return 1, but returns 4 (following)
 	return el.compareDocumentPosition( document.createElement("fieldset") ) & 1;
@@ -6525,7 +6525,7 @@ jQuery.extend( {
 			name = finalPropName( origName );
 		}
 
-		// Try prefixed name followed by the unprefixed name
+		// Try prefixed name follow by the unprefixed name
 		hooks = jQuery.cssHooks[ name ] || jQuery.cssHooks[ origName ];
 
 		// If a hook was provided get the computed value from there

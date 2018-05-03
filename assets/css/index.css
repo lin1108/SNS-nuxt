@@ -17,7 +17,7 @@
 .index .main .recommend-collection{
     margin-bottom: 20px;
 }
-.index .main .recommend-collection a.collection{
+.index .main .recommend-collection>a{
     display: inline-block;
     margin: 0 20px 20px 0;
     border: 1px solid #dcdcdc;
@@ -33,6 +33,10 @@
 .index .main .recommend-collection a.more{
     color: #787878;
     white-space: nowrap;
+    background: none;
+    border: none;
+    line-height: 34px;
+    font-size: 16px;
 }
 .index .main .recommend-collection a.collection img{
     width: 32px;
@@ -372,7 +376,7 @@ footer .icp img{
     }
 }
 
-/******************************************文章详情页******************************************/
+/******************************************首页文章详情页******************************************/
 .note{
     position: relative;
     padding-top: 10px;

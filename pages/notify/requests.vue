@@ -1,11 +1,11 @@
 <template>
     <div>
-        <myheader></myheader>
+        <myheader title="notify"></myheader>
         <div class="container notification">
             <div class="row">
                 <!--================左侧边栏==================-->
                 <div class="col-xs-8">
-                    <left-aside></left-aside>
+                    <left-aside title="requests"></left-aside>
                 </div>
                 <!--============中间部分=============-->
                 <div class="col-xs-16 main">
@@ -39,7 +39,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     @import '../../assets/css/notify/notify.css';
 
 </style>

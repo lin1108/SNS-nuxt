@@ -1,0 +1,178 @@
+.row {
+    padding-top: 30px;
+}
+/*****************************我的主页********************************/
+.main-top {
+    margin-bottom: 20px;
+}
+.main-top .avatar {
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+.main-top .avatar>img {
+    border-radius: 50%;
+}
+.main .main-top .title {
+    padding: 5px 0 0 100px;
+}
+.main .main-top .title .name {
+    font-size: 21px;
+    font-weight: 700;
+    vertical-align: middle;
+}
+.main .main-top .info {
+    margin-top: 5px;
+    padding-left: 100px;
+    font-size: 14px;
+}
+.main-top .info ul li {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 7px 6px 0;
+    padding: 0 7px 0 0;
+    border-right: 1px solid #f0f0f0;
+}
+.main-top .info ul li:nth-last-child(1) {
+    border: none;
+}
+.main-top .info ul div, .main-top .info ul li i {
+    color: #969696;
+}
+/***************菜单切换***************/
+.outer-container .ul-menu {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.outer-container ul li {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #969696;
+    line-height: 25px;
+    margin-bottom: -1px;
+    cursor: pointer;
+}
+.outer-container .ul-menu li i {
+    margin-right: 5px;
+}
+.outer-container .ul-menu li.active {
+    border-bottom: 2px solid #646464;
+    color: #646464;
+}
+.outer-container .ul-menu li:hover {
+    border-bottom: 2px solid #646464;
+    color: #646464;
+}
+
+/****************侧边栏****************/
+.aside .title {
+    float: left;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #969696;
+}
+.function-btn {
+    float: right;
+    font-size: 13px;
+    color: #969696;
+    cursor: pointer;
+}
+.aside .function-btn:hover {
+    color: #2f2f2f;
+}
+.aside .clear {
+    overflow: hidden;
+    clear: both;
+}
+.aside .profile-edit {
+    margin-bottom: 20px;
+    margin: 0 0 20px;
+}
+.aside .profile-edit textarea {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 125px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #f7f7f7;
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+}
+.aside .profile-edit .btn-save {
+    padding: 5px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #42c02e;
+    border: 1px solid #42c02e;
+    border-radius: 40px;
+    background: none;
+}
+.aside .profile-edit .btn-save:hover {
+    border: 1px solid #3db922;
+    background-color: #f5fcf3;
+}
+.aside .profile-edit a {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #969696;
+    line-height: 34px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.aside .profile-edit a:hover {
+    color: #2f2f2f;
+}
+.aside .desc {
+    margin-bottom: 16px;
+    padding: 0 0 16px;
+}
+.aside .user-dynamic {
+    padding: 16px 0 6px 0;
+    margin: 16px 0;
+    list-style: none;
+    border-bottom: 1px solid #f0f0f0;
+    border-top: 1px solid #f0f0f0;
+}
+.aside .list li {
+    margin-bottom: 10px;
+    display: list-item;
+}
+.aside .list li a {
+    font-size: 14px;
+    color: #333;
+    line-height: 30px;
+}
+.aside .list li a i {
+    margin-right: 10px;
+    vertical-align: middle;
+    font-size: 20px;
+}
+.aside .special {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #969696;
+}
+.aside .new-collection {
+    margin-bottom: 16px;
+    padding: 0 0 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.aside .new-collection a {
+    font-size: 13px;
+    color: #42c02e;
+}
+.aside .new-collection a i {
+    margin-right: 2px;
+    font-size: inherit;
+}
+/*********************************收藏的文章**********************************/
+.tag-img{
+    width: 100%;
+    border-radius: 6px;
+}
+
+/*********************************设置*********************************/

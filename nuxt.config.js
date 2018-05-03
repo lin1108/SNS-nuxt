@@ -14,6 +14,7 @@ module.exports = {
             {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
         ]
     },
+    // 配置v-tooltip插件
     plugins:[
         {src:'~/plugins/myPlugins',ssr:false}
     ],
@@ -21,12 +22,13 @@ module.exports = {
     ** Global CSS
     */
     css: [
-        '~/assets/css/main.css',
         '~/assets/css/animate.css',
         '~/assets/css/font-awesome.css',
         './assets/css/iconfont/iconfont.css',
+        '~/assets/css/main.css',
+        '~/assets/css/grid.css',  //栅格系统的布局
         '~/assets/css/index.css',
-        '~/assets/css/tooltip.css'
+        '~/assets/css/tooltip.css' //v-tooltip插件样式
     ],
     /*
     ** Add axios globally

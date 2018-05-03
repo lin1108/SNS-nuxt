@@ -1,6 +1,6 @@
 <template>
     <div style="height: 100%">
-        <myheader></myheader>
+        <myheader title="index"></myheader>
         <div class="container index">
             <div class="row">
                 <!--====================热门专题以及文章列表===================-->
@@ -121,7 +121,7 @@
                                                 <span class="time">04.23 19:20</span>
                                             </div>
                                         </div>
-                                        <nuxt-link class="title" to="/">二胎辣妈，每月五万字：在写作里，我是那个自律的“疯子”</nuxt-link>
+                                        <nuxt-link class="title" to="/p/111">二胎辣妈，每月五万字：在写作里，我是那个自律的“疯子”</nuxt-link>
                                         <div class="abstruct">
                                             因为热爱，所以疯狂。 2018.3.7 文/与君成悦 01 大宝幼儿园开学了，等了一个假期，终于等到了这一天，我像是看到了希望似的，开心极了。
                                             凌乱喧闹的假期，她一会儿一个妈...
@@ -327,15 +327,15 @@
                                     <nuxt-link to="/" class="avatar">
                                         <img src="~assets/img/author1.jpg" alt="">
                                     </nuxt-link>
-                                    <!--<a href="#" class="followed" v-if="followed" @click="followedshow">-->
+                                    <!--<a href="#" class="follow" v-if="follow" @click="followedshow">-->
                                         <!--<i class="fa fa-plus"></i>-->
                                         <!--关注-->
                                     <!--</a>-->
-                                    <!--<a href="#" class="followed followed" v-if="followed" @mouseenter="unfollowedshow">-->
+                                    <!--<a href="#" class="follow follow" v-if="follow" @mouseenter="unfollowedshow">-->
                                         <!--<i class="fa fa-check"></i>-->
                                         <!--已关注-->
                                     <!--</a>-->
-                                    <!--<a href="#" class="followed followed" v-if="unfollowed" @click="followshow" @mouseleave="unfollowedhide">-->
+                                    <!--<a href="#" class="follow follow" v-if="unfollowed" @click="followshow" @mouseleave="unfollowedhide">-->
                                         <!--<i class="fa fa-close"></i>-->
                                         <!--取消关注-->
                                     <!--</a>-->
@@ -455,8 +455,8 @@
                 showTitle: false,
                 codeshow: false,
                 degree: 0,
-                // followed: true,
-                // followed: false,
+                // follow: true,
+                // follow: false,
                 // unfollowed: false,
                 followshow:true,
                 followedshow:true,
@@ -472,19 +472,19 @@
                 this.degree = this.degree + 360;
             },
             // followedshow: function () {
-            //     this.followed = false;
-            //     this.followed = true;
+            //     this.follow = false;
+            //     this.follow = true;
             // },
             // unfollowedshow: function () {
-            //     this.followed = false;
+            //     this.follow = false;
             //     this.unfollowed = true;
             // },
             // unfollowedhide: function () {
-            //     this.followed = true;
+            //     this.follow = true;
             //     this.unfollowed = false;
             // },
             // followshow: function () {
-            //     this.followed = true;
+            //     this.follow = true;
             //     this.unfollowed = false;
             // }
 

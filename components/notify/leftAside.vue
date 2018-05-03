@@ -21,7 +21,7 @@
             </li>
             <li :class="checkedmenu=='likes'?'active':''" @click="checkedmenu='likes'">
                 <nuxt-link to="/notify/likes">
-                    <i class="iconfont icon-like1"></i>
+                    <i class="iconfont icon-heart1"></i>
                     喜欢和赞
                 </nuxt-link>
             </li>
@@ -33,7 +33,7 @@
             </li>
             <li :class="checkedmenu=='money'?'active':''" @click="checkedmenu='money'">
                 <nuxt-link to="/notify/money">
-                    <i class="iconfont icon-money"></i>
+                    <i class="iconfont icon-money1"></i>
                     赞赏和付费
                 </nuxt-link>
             </li>
@@ -50,10 +50,14 @@
 <script>
     export default {
         name: "leftAside",
+        props:['title'],
         data() {
             return{
                 checkedmenu:'comments'
             }
+        },
+        mounted:function () {
+            this.checkedmenu = this.title;
         }
     }
 </script>

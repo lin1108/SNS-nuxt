@@ -1,0 +1,233 @@
+.follow .row {
+    padding: 30px 0;
+}
+.follow .main .note-list li{
+    width: 100%;
+    margin: 0 0 17px;
+    padding: 0 2px 17px 0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+.follow .main .note-list li.have-img{
+    min-height: 140px;
+}
+.follow .main .note-list li.have-img .wrap-img{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 150px;
+    height: 120px;
+    margin-top: -68px;
+}
+.follow .main .note-list li.have-img .content{
+    padding-right: 160px;
+}
+.follow .main .note-list .author{
+    margin-bottom: 14px;
+    font-size: 13px;
+}
+.follow .main .note-list .author .avatar{
+    vertical-align: middle;
+    margin: 0 5px 0 0;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+.follow .main .note-list .author .avatar>img{
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+.follow .main .note-list .author .info{
+    display: inline-block;
+    vertical-align: middle;
+}
+.follow .main .note-list .author .info .img-icon{
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.follow .main .note-list .author .info span{
+    color: #969696;
+    font-weight: normal;
+}
+/*.follow .main .note-list .title:visited{*/
+/*color: #969696;*/
+/*}*/
+.follow .main .note-list .title{
+    margin: -7px 0 4px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.follow .main .note-list .abstract{
+    margin: 0 0 8px;
+    font-size: 13px;
+    line-height: 24px;
+    color: #333;
+    font-weight: normal;
+}
+.follow .main .note-list .meta{
+    padding-right: 0;
+    font-size: 12px;
+    line-height: 20px;
+}
+.follow .main .note-list .meta a.origin-author{
+    margin-bottom: 5px;
+    color: #3194d0;
+    font-size: 13px;
+}
+.follow .main .note-list .meta i{
+    font-size: 13px;
+    margin-right: 3px;
+}
+.follow .main .note-list .meta a.active,
+.follow .main .note-list .meta span{
+    margin-right: 10px;
+    color: #b4b4b4;
+}
+.follow .main .note-list .meta a.active:hover{
+    color: #3f3f3f;
+}
+.follow .main .note-list .more{
+    width: 100%;
+    height: 40px;
+    margin: 30px auto 60px;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #a5a5a5;
+    display: block;
+}
+.follow .main .note-list .more:hover{
+    background-color: #9f9f9f;
+}
+
+/*************************************collection**************************************/
+.follow .main .main-top{
+    margin-bottom: 30px;
+}
+.follow .main .main-top .avatar{
+    float: left;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+.follow .main .main-top .avatar>img{
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10%;
+}
+.follow .main .main-top .btn-hollow{
+    padding: 8px 16px;
+    float: right;
+    margin: 23px 0 23px 20px;
+    font-size: 14px;
+    border: 1px solid #42c02e;
+    color: #42c02e;
+    border-radius: 40px;
+    text-align: center;
+}
+.follow .main .main-top .btn-hollow:hover{
+    background-color: #F5FCF3;
+    border-color: #3db922;
+}
+.follow .main .main-top .title {
+    font-size: 21px;
+    font-weight: 700;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+.follow .main .main-top .info{
+    font-size: 14px;
+    color: #969696;
+    margin-top: 10px;
+}
+.follow .main .main-top .info>a{
+    color: #3194D0;
+}
+
+/*************is动态组件切换************/
+.outer-container .ul-menu {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.outer-container ul li {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #969696;
+    line-height: 25px;
+    margin-bottom: -1px;
+    cursor: pointer;
+}
+.outer-container .ul-menu li i {
+    margin-right: 5px;
+}
+.outer-container .ul-menu li.active {
+    border-bottom: 2px solid #646464;
+    color: #646464;
+}
+.outer-container .ul-menu li:hover {
+    border-bottom: 2px solid #646464;
+    color: #646464;
+}
+
+/********************************添加关注推荐******************************/
+.addfollow-list li{
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.addfollow-list li .btn{
+    float: right;
+    padding: 8px 0;
+    margin-top: 5px;
+}
+.addfollow-list li .avatar{
+    float: left;
+    width: 52px;
+    height: 52px;
+}
+.addfollow-list li .info{
+    padding-left: 64px;
+    padding-right: 120px;
+    min-height: 50px;
+}
+.addfollow-list li .info .name{
+    margin: 0 0 5px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+}
+.addfollow-list li .info p{
+    margin: 5px 0;
+    font-size: 13px;
+    color: #969696;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.addfollow-list li .info a{
+    margin-right: 10px;
+    color: #969696;
+    font-size: 13px;
+}
+.addfollow-list li .info a i{
+    font-size: 12px;
+}
+.addfollow-list li .info .meta {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #969696;
+}
+.addfollow-list li .info .meta a{
+    color: #3194d0;
+    margin-right: 5px;
+}
