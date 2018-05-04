@@ -1,3 +1,187 @@
 .row{
     padding-top: 30px;
 }
+/* ****************基础设置*************** */
+.main-top{
+    margin-bottom: 20px;
+    display: block;
+}
+form .avatar{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin-right: 50px;
+}
+.change{
+    opacity: 0;
+    position: absolute;
+    width: 70px;
+    display: block;
+}
+.btn-change{
+    border: 1px solid #42c02e;
+    color: #42c02e;
+    border-radius: 40px;
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.btn-change:hover{
+    background-color: #f5fcf3;
+}
+form ul li{
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
+}
+form ul li:nth-last-of-type(1){
+    border-bottom: none;
+}
+form ul li>span{
+    color: #969696;
+    display: inline-block;
+    width: 25%;
+}
+form ul li .right{
+    display: inline-block;
+    width: 74.9%;
+    vertical-align: middle;
+}
+form ul li div{
+    display: inline-block;
+}
+form ul li input.nickname{
+    padding: 8px 10px;
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+    font-size: 15px;
+}
+form ul li input.btn-change{
+    background-color: #fff;
+}
+form ul li .right>div:nth-of-type(1){
+    width: 33%;
+}
+form ul li .right>div:nth-of-type(2){
+    width: 66%;
+}
+form ul li .right a{
+    margin-left: 3px;
+    color: #969696;
+    border-radius: 50%;
+}
+form ul li .right p{
+    font-size: 12px;
+    margin: 5px 0 0 5px;
+    color: #969696;
+}
+form ul li.mail .right>div:nth-of-type(2){
+    width: 40%;
+}
+form ul li.mail .right>div:nth-of-type(3){
+    width: 26%;
+}
+form input.btn-success{
+    padding: 6px 0;
+    margin: 20px 0 60px 0;
+}
+
+/***********************个人资料***********************/
+form ul li.sex .right label{
+    margin-right: 20px;
+}
+form textarea{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 4px;
+    border: 1px solid #c8c8c8;
+    background-color: #f7f7f7;
+    resize: none;
+}
+form ul li input.nickname.website{
+    width: 100%;
+}
+form ul li .right p>a{
+    color: #3194d0;
+}
+form ul li.social .right, form ul li.intro .right{
+    vertical-align: top;
+}
+form ul li.social>span, form ul li.intro>span{
+    margin-top: 5px;
+}
+form ul li.social .right a>i{
+    width: 30px;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+form ul li.social .right span{
+    font-size: 14px;
+    color: #333;
+}
+/*************微博认证*************/
+.main>div{
+    margin: 20px 0 40px 15px;
+}
+.main>div .title{
+    font-size: 15px;
+    font-weight: 700;
+}
+.main>div .title span{
+    font-weight: normal;
+    color: #969696;
+    margin-left: 5px;
+}
+.main>div ul{
+    margin: 15px 0;
+    font-size: 15px;
+}
+.main>div ul li{
+    line-height: 30px;
+}
+.main>div ul li i{
+    margin-right: 5px;
+    color: #969696;
+}
+.main>div ul li i.check{
+    color: #42c02e;
+}
+/************黑名单**********/
+.blacklist .main p{
+    font-size: 12px;
+    color: #969696;
+}
+/************账号管理***********/
+li>span.delete{
+    cursor: pointer;
+}
+.hide-content h4{
+    font-size: 18px;
+    font-weight: 500;
+}
+.hide-content ul{
+    margin-bottom: 25px;
+    padding-left: 20px;
+    list-style: inherit;
+}
+.hide-content ul li{
+    border-bottom: none;
+    font-size: 14px;
+    padding: 10px 0;
+}
+.hide-content ul li a{
+    color: #3194d0;
+}
+.hide-content .btn.btn-delete{
+    border: 1px solid #ea6f5a;
+    color: #ea6f5a;
+    margin-left: 15px;
+}
+.hide-content .btn.btn-delete:hover{
+    background-color: #fef7f6;
+}

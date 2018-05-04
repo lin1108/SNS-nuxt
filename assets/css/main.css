@@ -49,6 +49,10 @@ a,a:hover{
     text-decoration: none;
     color: #333;
 }
+/*去除选中时的边框样式*/
+a:focus,textarea:focus{
+    outline: none;
+}
 /*******关于头像的设置*******/
 .avatar{
     display: block;
@@ -81,6 +85,21 @@ a,a:hover{
 .btn.btn-success:hover{
     background-color: #3db922;
 }
+
+/***********某些图标***********/
+.weibo{
+    color: #ea6f5a;
+}
+.weixin,.douban{
+    color: #42c02e;
+}
+.qq{
+    color: #3194d0;
+}
+.google{
+    color: #ec6149;
+}
+
 /************************************首页样式******************************************/
 .container{
     padding: 0 15px;

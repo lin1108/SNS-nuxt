@@ -387,7 +387,7 @@
         <!--================回到顶部================-->
         <div class="side-tool">
             <ul>
-                <li @click="returnTop" v-show="topbtnshow">
+                <li @click="returnTop" v-show="topbtnshow" v-tooltip.left="'回到顶部'">
                     <i class="iconfont icon-huidaodingbu"></i>
                 </li>
             </ul>
